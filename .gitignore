@@ -1,0 +1,6 @@
+node_modules/
+git-portable/
+*.zip
+*.log
+.gemini/
+.agents/

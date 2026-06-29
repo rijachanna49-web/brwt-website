@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Bilqees Razia Laghari Welfare Trust | BRWT Official Website</title>
+  <meta name="description" content="Official website of the Bilqees Razia Laghari Welfare Trust (BRWT). Serving underprivileged communities in Sindh through education, healthcare, clean water, and disaster relief.">
+  <meta name="keywords" content="BRWT, Bilqees Razia Welfare Trust, Larkana Welfare, Sindh Charity, Computer Education Sindh, Hepatitis Screening Sindh, Water Hand Pump Pakistan, NGO Sindh">
+  <meta name="author" content="Bilqees Razia Laghari Welfare Trust">
+  
+  <!-- Favicon / Logo (reference copy in project folder) -->
+  <link rel="icon" type="image/png" href="brwt_logo_premium.png">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Inline Script to Initialize Theme (Prevents Flash of Light Theme) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- App Header & Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-main" data-i18n="hero_heading">Bilqees Razia <span>Trust</span></span>
+        <span class="logo-sub" data-i18n="hero_badge">Welfare Trust</span>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
+        <li><a href="#story" class="nav-link" data-i18n="nav_story">Our Story</a></li>
+        <li><a href="#work" class="nav-link" data-i18n="nav_work">Our Work</a></li>
+        <li><a href="#impact" class="nav-link" data-i18n="nav_impact">Impact</a></li>
+        <li><a href="#board" class="nav-link" data-i18n="nav_board">Leadership</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        <li><button class="btn btn-teal btn-nav" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" onclick="openDonateModal()" data-i18n="nav_donate">Donate</button></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <!-- Language Switcher Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn" id="langBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span id="currentLang">English</span>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li onclick="changeLanguage('en')">English</li>
+            <li onclick="changeLanguage('ur')">اردو (Urdu)</li>
+            <li onclick="changeLanguage('sd')">سنڌي (Sindhi)</li>
+          </ul>
+        </div>
+        
+        <!-- Light / Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Theme">
+          <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Moon Icon by default -->
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          &#9776;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-accent"></div>
+    <div class="container hero-grid">
+      <div class="hero-content animate-fade-in">
+        <span class="hero-badge" data-i18n="hero_badge">BRWT × Digital Presence</span>
+        <h1 data-i18n="hero_heading">Bilqees Razia Laghari <span>Welfare Trust</span></h1>
+        <p data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openDonateModal()" data-i18n="hero_btn_donate">Support Our Cause</button>
+          <button class="btn btn-secondary" onclick="openVolunteerModal()" data-i18n="hero_btn_volunteer">Become a Volunteer</button>
+        </div>
+      </div>
+      
+      <!-- Flagship Spotlight Card -->
+      <div class="spotlight-card animate-fade-in" style="animation-delay: 0.2s;">
+        <span class="spotlight-tag" data-i18n="spotlight_tag">Flagship Relief Campaign</span>
+        <h2 class="spotlight-title" data-i18n="spotlight_title">Flood Relief Operation</h2>
+        <p class="spotlight-desc" data-i18n="spotlight_desc">A continuous three-month emergency rescue, food, and medical camp set up during the severe flooding crisis in Sindh.</p>
+        <div class="spotlight-stat">
+          <span class="spotlight-stat-num" data-i18n="spotlight_stat_num">6,000</span>
+          <span class="spotlight-stat-label" data-i18n="spotlight_stat_label">People Fed Daily</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story / Legacy Section -->
+  <section class="history" id="story">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="story_title">Our Founding Legacy</h2>
+        <p data-i18n="story_subtitle">Honoring the values of selflessness, empathy, and service to humanity.</p>
+      </div>
+      
+      <div class="history-grid">
+        <div class="history-img-wrapper">
+          <!-- Main visual fallback or placeholder -->
+          <img src="brwt_logo_premium.png" alt="BRWT Logo" class="history-image" style="object-fit: contain; padding: 2rem; background: var(--bg-secondary);">
+          <div class="history-img-deco"></div>
+        </div>
+        
+        <div class="history-content">
+          <h3 data-i18n="story_content_title">The Story of Bilqees & Razia</h3>
+          <p data-i18n="story_para1">The Bilqees Razia Laghari Welfare Trust (BRWT) was born from a deep family commitment to honor the legacy of Bilqees and Razia. As maternal pillars of the Laghari family, their lives exemplified absolute compassion and care for the needy.</p>
+          <p data-i18n="story_para2">To ensure their legacy continues to light the path for future generations, the surviving family members established this Trust. We focus on bridging critical development and humanitarian gaps in Sindh—particularly in Larkana, Dadu, and nearby districts—by raising local capacities, providing modern web education, and ensuring basic public healthcare.</p>
+          
+          <div class="history-quote">
+            <p data-i18n="story_quote">"The purpose of life is not just to exist, but to serve others with compassion and build a healthier, empowered nation."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Dashboard Section -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="impact_title">Real Verifiable Impact</h2>
+        <p data-i18n="impact_subtitle">We believe in transparency. These figures represent self-reported, direct milestones achieved by BRWT on the ground.</p>
+      </div>
+      
+      <div class="stats-grid">
+        <!-- Stat Card 1: IT Ed -->
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div class="stat-number" data-target="7000">0</div>
+          <div class="stat-label" data-i18n="stat_edu_label">Students Trained</div>
+          <div class="stat-desc" data-i18n="stat_edu_desc">In Computer Education courses, building digital skills and self-reliance.</div>
+        </div>
+        
+        <!-- Stat Card 2: Eye Camps -->
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <div class="stat-number" data-target="28">0</div>
+          <div class="stat-label" data-i18n="stat_eye_label">Cataract Surgeries</div>
+          <div class="stat-desc" data-i18n="stat_eye_desc">Performed successfully across 16 mobile clinical eye camps.</div>
+        </div>
+        
+        <!-- Stat Card 3: Hand Pumps -->
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="stat-number" data-target="3000">0</div>
+          <div class="stat-label" data-i18n="stat_water_label">Hand Pumps Installed</div>
+          <div class="stat-desc" data-i18n="stat_water_desc">Providing clean drinking water across remote water-stressed villages.</div>
+        </div>
+
+        <!-- Stat Card 4: Marriages -->
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+          </div>
+          <div class="stat-number" data-target="25">0</div>
+          <div class="stat-label" data-i18n="stat_marriages_label">Combined Marriages</div>
+          <div class="stat-desc" data-i18n="stat_marriages_desc">Supported for orphaned and low-income couples in community ceremonies.</div>
+        </div>
+
+        <!-- Stat Card 5: COVID-19 -->
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <div class="stat-number" data-target="5000">0</div>
+          <div class="stat-label" data-i18n="stat_covid_label">Families Assisted</div>
+          <div class="stat-desc" data-i18n="stat_covid_desc">With emergency food rations and medical packages during the pandemic.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Work / Programs Details Section -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="work_title">Our Care Initiatives</h2>
+        <p data-i18n="work_subtitle">Bridging the gaps in health, education, and social protection with dedicated expertise.</p>
+      </div>
+      
+      <div class="programs-grid">
+        <!-- Program 1: Web Ed -->
+        <div class="program-card">
+          <!-- Fallback or custom banner -->
+          <img src="trust_education_banner.png" alt="IT Education Banner" class="program-img">
+          <div class="program-info">
+            <span class="program-tag" data-i18n="prog_edu_tag">Education</span>
+            <h3 data-i18n="prog_edu_title">Web & IT Education</h3>
+            <p data-i18n="prog_edu_desc">Empowering rural youth by establishing computer labs and providing fully free training in full-stack web development, turning them into independent earners.</p>
+            <div class="program-footer">
+              <span class="program-stat">7,000+ Trained</span>
+              <a class="program-link" onclick="openProgramModal('edu')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Program 2: Health -->
+        <div class="program-card">
+          <img src="trust_health_banner.png" alt="Health Banner" class="program-img">
+          <div class="program-info">
+            <span class="program-tag" data-i18n="prog_health_tag">Healthcare</span>
+            <h3 data-i18n="prog_health_title">Public Health Awareness</h3>
+            <p data-i18n="prog_health_desc">Active Hepatitis B/C and HIV/AIDS diagnostic screening campaigns to check and guide patients in rural Sindh under collaborations with APPNA and APGNA.</p>
+            <div class="program-footer">
+              <span class="program-stat">16 Eye Camps</span>
+              <a class="program-link" onclick="openProgramModal('health')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Program 3: Water -->
+        <div class="program-card">
+          <!-- Fallback CSS gradient since there is no water banner, or custom CSS image -->
+          <div class="program-img" style="background: linear-gradient(135deg, #1e6e68, #162542); display: flex; align-items: center; justify-content: center; color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="program-info">
+            <span class="program-tag" data-i18n="prog_water_tag">Water & Sanitation</span>
+            <h3 data-i18n="prog_water_title">Clean Water Access</h3>
+            <p data-i18n="prog_water_desc">Installing over 3,000 hand pumps and water wells to bring clean, disease-free drinking water right to the doorsteps of underprivileged communities.</p>
+            <div class="program-footer">
+              <span class="program-stat">3,000+ Installed</span>
+              <a class="program-link" onclick="openProgramModal('water')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Board of Trustees Section -->
+  <section class="board" id="board">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="board_title">Leadership & Governance</h2>
+        <p data-i18n="board_subtitle">Guided by dedicated professionals who bring structure, compassion, and accountability to our work.</p>
+      </div>
+      
+      <div class="board-grid">
+        <!-- Board Member 1 -->
+        <div class="board-card">
+          <div class="board-avatar">HZ</div>
+          <h3 data-i18n="board1_name">Haji Zaffar Ali Khan Laghari</h3>
+          <div class="board-role" data-i18n="board1_role">Chairperson</div>
+          <p class="board-desc" data-i18n="board1_desc">Guiding the trust's long-term vision, ensuring alignment with our core values of service and integrity.</p>
+        </div>
+        
+        <!-- Board Member 2 -->
+        <div class="board-card">
+          <div class="board-avatar">QL</div>
+          <h3 data-i18n="board2_name">Qambar Ali Khan Laghari</h3>
+          <div class="board-role" data-i18n="board2_role">Vice Chairman</div>
+          <p class="board-desc" data-i18n="board2_desc">Managing strategic partnerships and field operations across educational and clean water projects.</p>
+        </div>
+        
+        <!-- Board Member 3 -->
+        <div class="board-card">
+          <div class="board-avatar">NL</div>
+          <h3 data-i18n="board3_name">Dr. Naeem Ahmed Laghari</h3>
+          <div class="board-role" data-i18n="board3_role">General Secretary</div>
+          <p class="board-desc" data-i18n="board3_desc">Overseeing medical camp coordination, research, and collaborative healthcare programs.</p>
+        </div>
+        
+        <!-- Board Member 4 -->
+        <div class="board-card">
+          <div class="board-avatar">AL</div>
+          <h3 data-i18n="board4_name">Dr. Ahmed Sultan Laghari</h3>
+          <div class="board-role" data-i18n="board4_role">Coordinator</div>
+          <p class="board-desc" data-i18n="board4_desc">Directing local community engagement, logistics, and emergency disaster relief operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section class="get-involved-contact" id="contact">
+    <div class="container involve-grid">
+      <!-- Contact Info Card -->
+      <div class="contact-info">
+        <h2 data-i18n="contact_title">Get in Touch</h2>
+        <p data-i18n="contact_subtitle" style="margin-bottom: 2.5rem;">Have questions? Want to collaborate or visit one of our clinics? Reach out to us directly.</p>
+        
+        <ul class="contact-info-list">
+          <li class="contact-info-item">
+            <div class="contact-info-icon">&#128205;</div>
+            <div class="contact-info-text">
+              <h4 data-i18n="contact_office_label">Registered Office</h4>
+              <p data-i18n="contact_office_val">Bilqees Razia Trust Office, Larkana, Sindh, Pakistan</p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <div class="contact-info-icon">&#128231;</div>
+            <div class="contact-info-text">
+              <h4 data-i18n="contact_email_label">Email Address</h4>
+              <p>info@bilqeesraziatrust.org</p>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <div class="contact-info-icon">&#128222;</div>
+            <div class="contact-info-text">
+              <h4 data-i18n="contact_phone_label">Phone / WhatsApp</h4>
+              <p>+92 346 0205203</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-card">
+        <h3 data-i18n="contact_form_title">Send Us a Message</h3>
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="formName" data-i18n="form_label_name">Full Name</label>
+            <input type="text" id="formName" class="form-control" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="formEmail" data-i18n="form_label_email">Email Address</label>
+            <input type="email" id="formEmail" class="form-control" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="formSubject" data-i18n="form_label_subject">Subject</label>
+            <input type="text" id="formSubject" class="form-control" required placeholder="Partnership inquiry">
+          </div>
+          <div class="form-group">
+            <label for="formMessage" data-i18n="form_label_message">Message</label>
+            <textarea id="formMessage" class="form-control" rows="4" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="form_btn_send">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3 data-i18n="hero_heading">Bilqees Razia Trust</h3>
+        <p data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="nav_work">Our Work</h4>
+        <ul>
+          <li><a href="#work" data-i18n="prog_edu_title">Web & IT Education</a></li>
+          <li><a href="#work" data-i18n="prog_health_title">Public Health Awareness</a></li>
+          <li><a href="#work" data-i18n="prog_water_title">Clean Water Access</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="nav_contact">Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-i18n="nav_home">Home</a></li>
+          <li><a href="#story" data-i18n="nav_story">Our Story</a></li>
+          <li><a href="#impact" data-i18n="nav_impact">Impact</a></li>
+          <li><a href="#board" data-i18n="nav_board">Leadership</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Bilqees Razia Laghari Welfare Trust. All Rights Reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#" onclick="alert('This website is a premium redesign concept.')">Privacy Policy</a></li>
+        <li><a href="#" onclick="alert('All statistics confirmed directly by BRWT leadership.')">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODALS SECTION
+       ========================================== -->
+  
+  <!-- Donation Modal -->
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 data-i18n="donate_modal_title">Support Our Mission</h3>
+        <button class="modal-close" onclick="closeDonateModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="donation-tabs">
+          <div class="donation-tab active" id="tabOnce" onclick="setDonationType('once')" data-i18n="donate_tab_once">One-Time Donation</div>
+          <div class="donation-tab" id="tabMonthly" onclick="setDonationType('monthly')" data-i18n="donate_tab_monthly">Monthly Support</div>
+        </div>
+        
+        <p data-i18n="donate_label_amount" style="margin-bottom: 0.75rem; font-weight: 600;">Choose Donation Amount (USD)</p>
+        <div class="donation-grid">
+          <button class="donation-btn active" onclick="setDonationAmount(25, this)">$25</button>
+          <button class="donation-btn" onclick="setDonationAmount(50, this)">$50</button>
+          <button class="donation-btn" onclick="setDonationAmount(100, this)">$100</button>
+          <button class="donation-btn" onclick="setDonationAmount(250, this)">$250</button>
+        </div>
+        
+        <div class="form-group">
+          <label for="customAmount" data-i18n="donate_label_amount">Or Custom Amount ($)</label>
+          <input type="number" id="customAmount" class="form-control" placeholder="10" oninput="clearActiveDonationButtons(this.value)">
+        </div>
+        
+        <button class="btn btn-teal" style="width: 100%; margin-top: 1rem;" onclick="handleDonationSubmit()" data-i18n="donate_btn_submit">Proceed to Secure Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Volunteer Modal -->
+  <div class="modal-overlay" id="volunteerModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 data-i18n="volunteer_modal_title">Apply as a Volunteer</h3>
+        <button class="modal-close" onclick="closeVolunteerModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="handleVolunteerSubmit(event)">
+          <div class="form-group">
+            <label for="volName" data-i18n="volunteer_label_name">Full Name</label>
+            <input type="text" id="volName" class="form-control" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="volEmail" data-i18n="volunteer_label_email">Email</label>
+            <input type="email" id="volEmail" class="form-control" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="volPhone" data-i18n="volunteer_label_phone">Phone Number</label>
+            <input type="tel" id="volPhone" class="form-control" required placeholder="+92 300 1234567">
+          </div>
+          <div class="form-group">
+            <label for="volProg" data-i18n="volunteer_label_prog">Preferred Program</label>
+            <select id="volProg" class="form-control" required>
+              <option value="education">Web & IT Education</option>
+              <option value="health">Public Health & Medical Camps</option>
+              <option value="water">Clean Water Access</option>
+              <option value="relief">Disaster Relief Operations</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-teal" style="width: 100%; margin-top: 1rem;" data-i18n="volunteer_btn_submit">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Program details Modal -->
+  <div class="modal-overlay" id="programModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="progModalTitle">Program Details</h3>
+        <button class="modal-close" onclick="closeProgramModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="progModalBody">
+        <!-- Dynamic program details go here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
