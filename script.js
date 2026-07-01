@@ -15,8 +15,8 @@ const translations = {
     nav_contact: "Contact",
     nav_donate: "Donate",
     
-    hero_badge: "BRWT × Digital Presence",
-    hero_heading: "Bilqees Razia Laghari <span>Welfare Trust</span>",
+    hero_badge: "Small Help Can Make Change",
+    hero_heading: "New Hope For Near Future",
     hero_sub: "Serving Rural Sindh with Compassion, Health, and Education",
     hero_desc: "A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.",
     hero_btn_donate: "Support Our Cause",
@@ -118,8 +118,8 @@ const translations = {
     nav_contact: "رابطہ",
     nav_donate: "عطیہ کریں",
     
-    hero_badge: "بی آر ڈبلیو ٹی × ڈیجیٹل موجودگی",
-    hero_heading: "بلقیس رضیہ لغاری <span>ویلفیئر ٹرسٹ</span>",
+    hero_badge: "چھوٹی سی مدد بڑی تبدیلی لا سکتی ہے",
+    hero_heading: "مستقبل کے لیے نئی امید",
     hero_sub: "صحت، تعلیم اور ہمدردی کے ساتھ سندھ کے دیہی علاقوں کی خدمت",
     hero_desc: "ایک مخلص غیر منافع بخش تنظیم جو کمپیوٹر کی مفت تعلیم، صحت عامہ کی آگاہی، صاف پینے کے پانی کی فراہمی، اور ہنگامی ریلیف کے ذریعے سندھ، پاکستان کے محروم علاقوں کی زندگیوں کو بہتر بنانے کے لیے کوشاں ہے۔",
     hero_btn_donate: "ہماری مدد کریں",
@@ -221,8 +221,8 @@ const translations = {
     nav_contact: "رابطو",
     nav_donate: "عطيو ڪريو",
     
-    hero_badge: "بي آر ڊبليو ٽي × ڊيجيٽل موجودگي",
-    hero_heading: "بلقيس رضيه لغاري <span>ويلفيئر ٽرسٽ</span>",
+    hero_badge: "ننڍڙي مدد وڏي تبديلي آڻي سگهي ٿي",
+    hero_heading: "مستقبل لاءِ نئين اميد",
     hero_sub: "سنڌ جي ٻهراڙين جي خدمت، صحت، تعليم ۽ همدرديءَ سان",
     hero_desc: "هڪ مخلص غير منافع بخش تنظيم جيڪا ڪمپيوٽر جي مفت تعليم، صحت جي آگاهي، صاف پاڻي جي فراهمي، ۽ هنگامي رليف ذريعي سنڌ، پاڪستان جي غريب علائقن کي بهتر بڻائڻ لاءِ ڪوشان آهي.",
     hero_btn_donate: "اسان جي مدد ڪريو",

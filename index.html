@@ -26,6 +26,30 @@
 </head>
 <body>
 
+  <!-- Top Utility Bar (WishFund Style) -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+92 346 0205203</span>
+        </div>
+        <div class="top-bar-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>info@bilqeesraziatrust.org</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <div class="top-bar-socials">
+          <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        </div>
+        <button class="btn-top-donate" onclick="openDonateModal()" data-i18n="nav_donate">Donate Now</button>
+      </div>
+    </div>
+  </div>
+
   <!-- App Header & Navigation -->
   <header>
     <div class="nav-container">
@@ -46,7 +70,6 @@
         <li><a href="#impact" class="nav-link" data-i18n="nav_impact">Impact</a></li>
         <li><a href="#board" class="nav-link" data-i18n="nav_board">Leadership</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
-        <li><button class="btn btn-teal btn-nav" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;" onclick="openDonateModal()" data-i18n="nav_donate">Donate</button></li>
       </ul>
       
       <div class="nav-actions">
@@ -66,7 +89,6 @@
         <!-- Light / Dark Mode Toggle -->
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Theme">
           <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Moon Icon by default -->
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -79,29 +101,15 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Full-Width WishFund Style) -->
   <section class="hero" id="home">
-    <div class="hero-bg-accent"></div>
-    <div class="container hero-grid">
-      <div class="hero-content animate-fade-in">
-        <span class="hero-badge" data-i18n="hero_badge">BRWT × Digital Presence</span>
-        <h1 data-i18n="hero_heading">Bilqees Razia Laghari <span>Welfare Trust</span></h1>
-        <p data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" onclick="openDonateModal()" data-i18n="hero_btn_donate">Support Our Cause</button>
-          <button class="btn btn-secondary" onclick="openVolunteerModal()" data-i18n="hero_btn_volunteer">Become a Volunteer</button>
-        </div>
-      </div>
-      
-      <!-- Flagship Spotlight Card -->
-      <div class="spotlight-card animate-fade-in" style="animation-delay: 0.2s;">
-        <span class="spotlight-tag" data-i18n="spotlight_tag">Flagship Relief Campaign</span>
-        <h2 class="spotlight-title" data-i18n="spotlight_title">Flood Relief Operation</h2>
-        <p class="spotlight-desc" data-i18n="spotlight_desc">A continuous three-month emergency rescue, food, and medical camp set up during the severe flooding crisis in Sindh.</p>
-        <div class="spotlight-stat">
-          <span class="spotlight-stat-num" data-i18n="spotlight_stat_num">6,000</span>
-          <span class="spotlight-stat-label" data-i18n="spotlight_stat_label">People Fed Daily</span>
-        </div>
+    <div class="hero-container animate-fade-in">
+      <span class="hero-subtitle" data-i18n="hero_badge">Small Help Can Make Change</span>
+      <h1 class="hero-title" data-i18n="hero_heading">New Hope For Near Future</h1>
+      <p class="hero-desc" data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
+      <div class="hero-btns">
+        <button class="btn btn-primary" onclick="openDonateModal()" data-i18n="hero_btn_donate">Donate Today</button>
+        <button class="btn btn-secondary" onclick="openVolunteerModal()" data-i18n="hero_btn_volunteer">Become a Volunteer</button>
       </div>
     </div>
   </section>
@@ -208,7 +216,7 @@
         <!-- Program 1: Web Ed -->
         <div class="program-card">
           <!-- Fallback or custom banner -->
-          <img src="trust_education_banner.png" alt="IT Education Banner" class="program-img">
+          <img src="computer_education_sindh.png" alt="IT Education Banner" class="program-img">
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_edu_tag">Education</span>
             <h3 data-i18n="prog_edu_title">Web & IT Education</h3>
