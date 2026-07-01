@@ -16,7 +16,7 @@ const translations = {
     nav_donate: "Donate",
     
     hero_badge: "Small Help Can Make Change",
-    hero_heading: "New Hope For Near Future",
+    hero_heading: "New Hope for the Future",
     hero_sub: "Serving Rural Sindh with Compassion, Health, and Education",
     hero_desc: "A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.",
     hero_btn_donate: "Support Our Cause",
