@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BRWT PREMIUM WEBSITE - WISHFUND & CHARITICS REDESIGN
-   Theme: Emerald Green (#0B4728) & Amber Orange (#F29D38)
+   BRWT PREMIUM WEBSITE - WARM SAND, SLATE CHARCOAL & AMBER GOLD REDESIGN
+   Theme: Slate Charcoal (#1E293B) & Amber Gold (#C59B27)
    Fonts: Playfair Display (Headings) & Inter (Body)
    ========================================================================== */
 
@@ -8,19 +8,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
 
 :root {
-  /* Color Tokens - WishFund Style (Emerald & Amber Orange) */
+  /* Color Tokens - Premium Warm Sand & Charcoal Palette */
   --bg-primary: #FFFFFF;      
-  --bg-secondary: #F8FAF9;    /* Soft greenish-white background */
+  --bg-secondary: #FAF9F6;    /* Premium warm sand background */
   --bg-card: #FFFFFF;         
-  --text-primary: #1A202C;    /* Deep charcoal */
-  --text-secondary: #5A6A5F;  /* Sage charcoal for readable body text */
-  --color-border: #E2E8F0;    
+  --text-primary: #1E2229;    /* Deep charcoal */
+  --text-secondary: #656C73;  /* Slate grey body text */
+  --color-border: #EAE6DF;    /* Soft warm border */
   
-  --color-navy: #0B4728;      /* Primary Brand Green (matching logo emblem) */
-  --color-navy-light: #156238;/* Hover green */
-  --color-gold: #F29D38;      /* Secondary Brand Amber/Orange (from WishFund) */
-  --color-gold-hover: #D88320;/* Hover amber */
-  --color-teal: #1E6E68;      
+  --color-navy: #1E293B;      /* Primary Slate Charcoal */
+  --color-navy-light: #0F172A;/* Deep Slate */
+  --color-gold: #C59B27;      /* Secondary Amber Gold Accent */
+  --color-gold-hover: #A57E1A;/* Hover gold */
+  --color-teal: #2C3E50;      
   --color-white: #FFFFFF;
   
   /* Typography & Layout */
@@ -28,8 +28,8 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-urdu: 'Noto Naskh Arabic', serif;
   
-  --card-shadow: 0 4px 20px rgba(11, 71, 40, 0.03);
-  --shadow-lg: 0 10px 30px rgba(11, 71, 40, 0.06);
+  --card-shadow: 0 4px 20px rgba(30, 34, 42, 0.02);
+  --shadow-lg: 0 10px 30px rgba(30, 34, 42, 0.05);
   --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
@@ -37,7 +37,7 @@
   --max-width: 1200px;
 }
 
-/* Dark Mode Overrides - Clean Slate & Emerald */
+/* Dark Mode Overrides - Clean Slate & Amber Gold */
 [data-theme="dark"] {
   --bg-primary: #0F172A;      /* Deep Slate */
   --bg-secondary: #1E293B;    /* Slate-grey */
@@ -117,6 +117,7 @@ body {
 section {
   padding: 7.5rem 0;
   width: 100%;
+  background-color: var(--bg-primary);
 }
 
 .section-header {
@@ -197,7 +198,7 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-gold); /* Brand Orange/Amber */
+  background-color: var(--color-gold); /* Amber Gold */
   color: var(--color-white);
   border-color: var(--color-gold);
 }
@@ -243,10 +244,10 @@ p {
 }
 
 /* ==========================================
-   WISHFUND STYLE TOP UTILITY BAR
+   TOP UTILITY BAR
    ========================================== */
 .top-bar {
-  background-color: var(--color-navy); /* Dark forest green */
+  background-color: var(--color-navy); /* Slate Charcoal */
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-body);
   font-size: 0.82rem;
@@ -311,7 +312,7 @@ p {
 }
 
 .btn-top-donate {
-  background-color: var(--color-gold); /* Orange/Amber */
+  background-color: var(--color-gold); /* Amber Gold */
   color: var(--color-white);
   border: none;
   padding: 0.4rem 1.1rem;
@@ -335,7 +336,7 @@ header {
   width: 100%;
   background-color: #FFFFFF;
   border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 15px rgba(30, 34, 42, 0.02);
   z-index: 999;
   transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
 }
@@ -552,7 +553,7 @@ header {
 }
 
 /* ==========================================
-   WISHFUND FULL-WIDTH HERO WITH DARK OVERLAY
+   WISHFUND FULL-WIDTH HERO WITH CHARCOAL OVERLAY
    ========================================== */
 .hero {
   position: relative;
@@ -574,7 +575,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(11, 71, 40, 0.75); /* Emerald Green dark overlay */
+  background-color: rgba(30, 34, 42, 0.72); /* Premium Slate Charcoal dark overlay */
   z-index: 1;
 }
 
@@ -587,7 +588,7 @@ header {
 }
 
 .hero-subtitle {
-  color: var(--color-gold); /* Amber/Orange */
+  color: var(--color-gold); /* Amber Gold */
   font-family: var(--font-body);
   font-size: 1.1rem;
   font-weight: 700;
@@ -694,7 +695,7 @@ header {
 
 /* Impact Dashboard Section */
 .impact {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary); /* Soft Warm Sand */
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -724,8 +725,8 @@ header {
 .stat-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(11, 71, 40, 0.05);
-  color: var(--color-navy);
+  background-color: rgba(197, 155, 39, 0.05); /* Warm gold soft background */
+  color: var(--color-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -817,8 +818,8 @@ header {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-navy);
-  background-color: rgba(11, 71, 40, 0.05);
+  color: var(--color-gold);
+  background-color: rgba(197, 155, 39, 0.05);
   padding: 0.3rem 0.85rem;
   border-radius: var(--border-radius-sm);
   margin-bottom: 1.25rem;
@@ -886,9 +887,9 @@ header {
   color: var(--color-gold);
 }
 
-/* Board of Trustees Section (Profile Circle Image Overhaul) */
+/* Board of Trustees Section (Warm Sand theme, No Green backgrounds) */
 .board {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary); /* Soft Warm Sand background */
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -920,13 +921,13 @@ header {
   height: 120px;
   border-radius: 50%;
   margin: 0 auto 1.5rem auto;
-  background-color: #E2E8F0;
+  background-color: #F3EFE9; /* Clean warm grey background */
   border: 2.5px solid var(--color-gold);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(11, 71, 40, 0.08);
+  box-shadow: 0 4px 12px rgba(30, 34, 42, 0.05);
   transition: var(--transition-smooth);
 }
 
@@ -972,7 +973,7 @@ header {
 }
 
 .contact-card {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary); /* Soft Warm Sand background */
   border-radius: var(--border-radius-md);
   padding: 3.5rem;
   box-shadow: var(--card-shadow);
@@ -1011,8 +1012,8 @@ header {
 
 .form-control:focus {
   outline: none;
-  border-color: var(--color-navy);
-  box-shadow: 0 0 0 2px rgba(11, 71, 40, 0.1);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 2px rgba(197, 155, 39, 0.1);
 }
 
 .contact-info-list {
@@ -1050,7 +1051,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(15, 23, 42, 0.5);
+  background-color: rgba(30, 34, 42, 0.5);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 2000;
@@ -1137,9 +1138,9 @@ header {
 
 .donation-btn:hover,
 .donation-btn.active {
-  border-color: var(--color-navy);
-  color: var(--color-navy);
-  background-color: rgba(11, 71, 40, 0.03);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background-color: rgba(197, 155, 39, 0.03);
 }
 
 .donation-tabs {
@@ -1161,14 +1162,14 @@ header {
 }
 
 .donation-tab.active {
-  border-color: var(--color-navy);
-  color: var(--color-navy);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
 }
 
 /* Footer */
 footer {
-  background-color: #0E1A14; /* Deep forest charcoal */
-  color: #8CA095;
+  background-color: #14171C; /* Premium dark charcoal footer */
+  color: #8C939C;
   padding: 6.5rem 0 3.5rem 0;
   border-top: 3px solid var(--color-gold);
 }
@@ -1189,7 +1190,7 @@ footer {
 }
 
 .footer-brand p {
-  color: #8CA095;
+  color: #8C939C;
   font-size: 0.98rem;
   line-height: 1.7;
 }
@@ -1212,7 +1213,7 @@ footer {
 }
 
 .footer-links ul li a {
-  color: #8CA095;
+  color: #8C939C;
   text-decoration: none;
   font-size: 0.95rem;
   transition: var(--transition-smooth);
@@ -1236,7 +1237,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #64756D;
+  color: #646C75;
   margin: 0;
 }
 
@@ -1247,7 +1248,7 @@ footer {
 }
 
 .footer-bottom-links a {
-  color: #64756D;
+  color: #646C75;
   text-decoration: none;
   font-size: 0.85rem;
   transition: var(--transition-smooth);

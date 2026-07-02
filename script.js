@@ -403,7 +403,7 @@ function initTheme() {
   const themeIcon = document.getElementById('themeIcon');
   
   // Set default theme or fetch from localStorage
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 
