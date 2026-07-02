@@ -66,6 +66,10 @@ const translations = {
     prog_relief_title: "Disaster & Emergency Relief",
     prog_relief_desc: "Providing instant rescue, medical assistance, and hot meals to thousands of families displaced by devastating flash floods and global pandemics.",
     prog_learn_more: "Learn More \u2192",
+    prog_donor_tag: "Supporters",
+    prog_donor_title: "Khaireen & Donors",
+    prog_donor_desc: "Honoring our well-wishers and donors whose generous support powers free healthcare, clean water, and IT training campaigns across Sindh.",
+    prog_donor_stat: "100% Direct Impact",
     
     board_title: "Leadership & Governance",
     board_subtitle: "Guided by dedicated professionals who bring structure, compassion, and accountability to our work.",
@@ -169,6 +173,10 @@ const translations = {
     prog_relief_title: "سیلاب اور آفات میں ریلیف",
     prog_relief_desc: "سیلاب اور وبائی امراض سے متاثرہ خاندانوں کی ریسکیو، طبی امداد اور خوراک کی ہنگامی فراہمی۔",
     prog_learn_more: "تفصیلات جانیں \u2190",
+    prog_donor_tag: "مددگار اور عطیہ دہندگان",
+    prog_donor_title: "خیرین اور ڈونرز",
+    prog_donor_desc: "ہمارے خیر خواہ اور ڈونرز جن کے تعاون سے تعلیم، صحت اور صاف پانی کی مہمیں کامیابی کے ساتھ جاری ہیں۔",
+    prog_donor_stat: "100٪ براہ راست اثر",
     
     board_title: "ٹرسٹ کی قیادت اور انتظامیہ",
     board_subtitle: "مخلص اور پیشہ ور افراد پر مشتمل ٹیم جو ہمارے کام میں شفافیت اور ذمہ داری کو یقینی بناتی ہے۔",
@@ -272,6 +280,10 @@ const translations = {
     prog_relief_title: "ٻوڏ ۽ آفتن ۾ رليف",
     prog_relief_desc: "ٻوڏ ۽ وبائي مرضن ۾ متاثر خاندانن جي ريسڪيو، طبي امداد ۽ خوراڪ جي هنگامي فراهمي.",
     prog_learn_more: "تفصيل ڄاڻو \u2190",
+    prog_donor_tag: "مددگار ۽ عطيو ڏيندڙ",
+    prog_donor_title: "خيرين ۽ ڊونرز",
+    prog_donor_desc: "اسان جا خيرخواهه ۽ ڊونرز جن جي سهڪار سان تعليم، صحت ۽ صاف پاڻي جا پروگرام ڪاميابيءَ سان جاري آهن.",
+    prog_donor_stat: "100٪ سڌو سنئون اثر",
     
     board_title: "ٽرسٽ جي قيادت ۽ انتظاميه",
     board_subtitle: "مخلص ۽ پروفيشنل ماڻهن تي مشتمل ٽيم جيڪا اسان جي ڪم ۾ شفافيت کي يقيني بڻائي ٿي.",
@@ -378,6 +390,20 @@ const programDetails = {
       <br><br>
       هر پمپ کي ڪميونٽي جي گڏيل جڳهن تي لڳايو وڃي ٿو ته جيئن هر خاندان کي پيئڻ جي صاف ۽ جراثيم کان پاڪ پاڻي تائين آسان پهچ ملي سگهي، جنهن جي ڪري ڪالرا ۽ ٽائيفائيڊ جهڙين بيمارين ۾ وڏي گهٽتائي آئي آهي.`
     }
+  },
+  donor: {
+    en: {
+      title: "Khaireen & Donors Support Initiative",
+      content: `BRWT operates on a 100% direct-impact donation model. Every single rupee donated by our well-wishers goes directly to fund computer labs, diagnostic kits, medicine, and hand pump installations. We maintain complete transparency and provide digital receipts and verification reports to all our donors.`
+    },
+    ur: {
+      title: "خیرین اور عطیہ دہندگان کا منصوبہ",
+      content: `بی آر ڈبلیو ٹی 100٪ براہ راست اثر کے ماڈل پر کام کرتا ہے۔ خیرین کی طرف سے دیا گیا ہر روپیہ کمپیوٹر لیبز، ہیپاٹائٹس اسکریننگ کٹس، ادویات اور ہینڈ پمپس کی تنصیب پر براہ راست خرچ ہوتا ہے۔ ہم مکمل شفافیت کے ساتھ عطیہ دہندگان کو رپورٹس فراہم کرتے ہیں۔`
+    },
+    sd: {
+      title: "خيرين ۽ عطيو ڏيندڙن جو پروگرام",
+      content: `بي آر ڊبليو ٽي 100٪ سڌو سنئون اثر جي ماڈل تي ڪم ڪري ٿو. خيرين پاران ڏنل هر پيسو ڪمپيوٽر ليبز، ميڊيڪل ڪيمپن ۽ هينڊ پمپن جي لڳائڻ تي سڌو خرچ ٿيندو آهي. اسان پنهنجي ڊونرز کي رپورٽون پڻ موڪليندا آهيون.`
+    }
   }
 };
 
@@ -393,6 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
   initScrollAnimations();
   initCounterAnimations();
+  init3DTilt();
 });
 
 // ==========================================
@@ -658,4 +685,31 @@ function handleContactSubmit(e) {
   e.preventDefault();
   alert("Simulation: Thank you for your message! We will reply to your email as soon as possible.");
   e.target.reset();
+}
+
+// ==========================================
+// 3D TILT EFFECT FOR CARDS
+// ==========================================
+function init3DTilt() {
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const xc = rect.width / 2;
+      const yc = rect.height / 2;
+      const dx = x - xc;
+      const dy = y - yc;
+      const tiltX = -(dy / yc) * 8;
+      const tiltY = (dx / xc) * 8;
+      card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+      card.style.boxShadow = `${-tiltY * 2}px ${tiltX * 2}px 25px rgba(128, 24, 36, 0.12)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      card.style.boxShadow = 'var(--card-shadow)';
+    });
+  });
 }

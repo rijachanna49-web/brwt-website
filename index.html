@@ -152,7 +152,7 @@
       
       <div class="stats-grid">
         <!-- Stat Card 1: IT Ed -->
-        <div class="stat-card">
+        <div class="stat-card tilt-card">
           <div class="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
           </div>
@@ -162,7 +162,7 @@
         </div>
         
         <!-- Stat Card 2: Eye Camps -->
-        <div class="stat-card">
+        <div class="stat-card tilt-card">
           <div class="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </div>
@@ -172,7 +172,7 @@
         </div>
         
         <!-- Stat Card 3: Hand Pumps -->
-        <div class="stat-card">
+        <div class="stat-card tilt-card">
           <div class="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
           </div>
@@ -182,7 +182,7 @@
         </div>
 
         <!-- Stat Card 4: Marriages -->
-        <div class="stat-card">
+        <div class="stat-card tilt-card">
           <div class="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
           </div>
@@ -192,7 +192,7 @@
         </div>
 
         <!-- Stat Card 5: COVID-19 -->
-        <div class="stat-card">
+        <div class="stat-card tilt-card">
           <div class="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
           </div>
@@ -214,8 +214,7 @@
       
       <div class="programs-grid">
         <!-- Program 1: Web Ed -->
-        <div class="program-card">
-          <!-- Fallback or custom banner -->
+        <div class="program-card tilt-card">
           <img src="computer_education_sindh.png" alt="IT Education Banner" class="program-img">
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_edu_tag">Education</span>
@@ -229,7 +228,7 @@
         </div>
         
         <!-- Program 2: Health -->
-        <div class="program-card">
+        <div class="program-card tilt-card">
           <img src="trust_health_banner.png" alt="Health Banner" class="program-img">
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_health_tag">Healthcare</span>
@@ -243,11 +242,8 @@
         </div>
         
         <!-- Program 3: Water -->
-        <div class="program-card">
-          <!-- Fallback CSS gradient since there is no water banner, or custom CSS image -->
-          <div class="program-img" style="background: linear-gradient(135deg, #1e6e68, #162542); display: flex; align-items: center; justify-content: center; color: white;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-          </div>
+        <div class="program-card tilt-card">
+          <img src="water_pump_sindh.png" alt="Clean Water Access" class="program-img">
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_water_tag">Water & Sanitation</span>
             <h3 data-i18n="prog_water_title">Clean Water Access</h3>
@@ -255,6 +251,22 @@
             <div class="program-footer">
               <span class="program-stat">3,000+ Installed</span>
               <a class="program-link" onclick="openProgramModal('water')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 4: Khaireen -->
+        <div class="program-card tilt-card">
+          <div class="program-img" style="background: linear-gradient(135deg, var(--color-navy), var(--color-gold)); display: flex; align-items: center; justify-content: center; color: white; height: 220px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div class="program-info">
+            <span class="program-tag" data-i18n="prog_donor_tag">Supporters</span>
+            <h3 data-i18n="prog_donor_title">Khaireen & Donors</h3>
+            <p data-i18n="prog_donor_desc">Honoring our well-wishers and donors whose generous support powers free healthcare, clean water, and IT training campaigns across Sindh.</p>
+            <div class="program-footer">
+              <span class="program-stat" data-i18n="prog_donor_stat">100% Direct Impact</span>
+              <a class="program-link" onclick="openProgramModal('donor')" data-i18n="prog_learn_more">Learn More &rarr;</a>
             </div>
           </div>
         </div>
@@ -272,10 +284,10 @@
       
       <div class="board-grid">
         <!-- Board Member 1 -->
-        <div class="board-card">
+        <div class="board-card tilt-card">
           <div class="board-avatar">
             <img src="zaffar_ali.png" alt="Haji Zaffar Ali Khan Laghari" class="board-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#E2E8F0; color:var(--color-navy); font-weight:700; font-size:1.8rem;">HZ</div>
+            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#F5EFE7; color:var(--color-navy); font-weight:700; font-size:1.8rem;">HZ</div>
           </div>
           <h3 data-i18n="board1_name">Haji Zaffar Ali Khan Laghari</h3>
           <div class="board-role" data-i18n="board1_role">Chairperson</div>
@@ -283,10 +295,10 @@
         </div>
         
         <!-- Board Member 2 -->
-        <div class="board-card">
+        <div class="board-card tilt-card">
           <div class="board-avatar">
             <img src="qambar_ali.png" alt="Qambar Ali Khan Laghari" class="board-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#E2E8F0; color:var(--color-navy); font-weight:700; font-size:1.8rem;">QL</div>
+            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#F5EFE7; color:var(--color-navy); font-weight:700; font-size:1.8rem;">QL</div>
           </div>
           <h3 data-i18n="board2_name">Qambar Ali Khan Laghari</h3>
           <div class="board-role" data-i18n="board2_role">Vice Chairman</div>
@@ -294,10 +306,10 @@
         </div>
         
         <!-- Board Member 3 -->
-        <div class="board-card">
+        <div class="board-card tilt-card">
           <div class="board-avatar">
             <img src="naeem_ahmed.png" alt="Dr. Naeem Ahmed Laghari" class="board-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#E2E8F0; color:var(--color-navy); font-weight:700; font-size:1.8rem;">NL</div>
+            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#F5EFE7; color:var(--color-navy); font-weight:700; font-size:1.8rem;">NL</div>
           </div>
           <h3 data-i18n="board3_name">Dr. Naeem Ahmed Laghari</h3>
           <div class="board-role" data-i18n="board3_role">General Secretary</div>
@@ -305,10 +317,10 @@
         </div>
         
         <!-- Board Member 4 -->
-        <div class="board-card">
+        <div class="board-card tilt-card">
           <div class="board-avatar">
             <img src="ahmed_sultan.png" alt="Dr. Ahmed Sultan Laghari" class="board-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#E2E8F0; color:var(--color-navy); font-weight:700; font-size:1.8rem;">AL</div>
+            <div class="board-avatar-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:#F5EFE7; color:var(--color-navy); font-weight:700; font-size:1.8rem;">AL</div>
           </div>
           <h3 data-i18n="board4_name">Dr. Ahmed Sultan Laghari</h3>
           <div class="board-role" data-i18n="board4_role">Coordinator</div>

@@ -1,26 +1,26 @@
 /* ==========================================================================
-   BRWT PREMIUM WEBSITE - WARM SAND, SLATE CHARCOAL & AMBER GOLD REDESIGN
-   Theme: Slate Charcoal (#1E293B) & Amber Gold (#C59B27)
+   BRWT PREMIUM WEBSITE - BURGUNDY, CHAMPAGNE GOLD & 3D OVERHAUL
+   Theme: Burgundy Crimson (#801824) & Champagne Gold (#D4AF37)
    Fonts: Playfair Display (Headings) & Inter (Body)
    ========================================================================== */
 
 /* Imports */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
 
 :root {
-  /* Color Tokens - Premium Warm Sand & Charcoal Palette */
+  /* Color Tokens - Premium Warm Luxury Burgundy & Gold Palette */
   --bg-primary: #FFFFFF;      
-  --bg-secondary: #FAF9F6;    /* Premium warm sand background */
+  --bg-secondary: #FAF7F2;    /* Soft Warm Off-White / Sand */
   --bg-card: #FFFFFF;         
-  --text-primary: #1E2229;    /* Deep charcoal */
-  --text-secondary: #656C73;  /* Slate grey body text */
-  --color-border: #EAE6DF;    /* Soft warm border */
+  --text-primary: #251F1C;    /* Cocoa Charcoal */
+  --text-secondary: #655E5A;  /* Soft Warm Grey */
+  --color-border: #EFEBE5;    /* Warm beige border */
   
-  --color-navy: #1E293B;      /* Primary Slate Charcoal */
-  --color-navy-light: #0F172A;/* Deep Slate */
-  --color-gold: #C59B27;      /* Secondary Amber Gold Accent */
-  --color-gold-hover: #A57E1A;/* Hover gold */
-  --color-teal: #2C3E50;      
+  --color-navy: #801824;      /* Primary Deep Burgundy */
+  --color-navy-light: #5C0E17;/* Dark Burgundy */
+  --color-gold: #D4AF37;      /* Secondary Champagne Gold Accent */
+  --color-gold-hover: #B29026;/* Hover Gold */
+  --color-teal: #3A2F2B;      
   --color-white: #FFFFFF;
   
   /* Typography & Layout */
@@ -28,16 +28,16 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-urdu: 'Noto Naskh Arabic', serif;
   
-  --card-shadow: 0 4px 20px rgba(30, 34, 42, 0.02);
-  --shadow-lg: 0 10px 30px rgba(30, 34, 42, 0.05);
-  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --card-shadow: 0 10px 30px rgba(128, 24, 36, 0.03);
+  --shadow-lg: 0 15px 40px rgba(128, 24, 36, 0.06);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
   --max-width: 1200px;
 }
 
-/* Dark Mode Overrides - Clean Slate & Amber Gold */
+/* Dark Mode Overrides - Slate & Burgundy Crimson */
 [data-theme="dark"] {
   --bg-primary: #0F172A;      /* Deep Slate */
   --bg-secondary: #1E293B;    /* Slate-grey */
@@ -106,6 +106,31 @@ body {
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
+/* Decorative background blurred blobs for 3D depth feeling */
+body::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, rgba(255,255,255,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(128, 24, 36, 0.02) 0%, rgba(255,255,255,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Layout Utilities */
 .container {
   max-width: var(--max-width);
@@ -115,7 +140,7 @@ body {
 }
 
 section {
-  padding: 7.5rem 0;
+  padding: 8rem 0;
   width: 100%;
   background-color: var(--bg-primary);
 }
@@ -123,26 +148,26 @@ section {
 .section-header {
   text-align: center;
   max-width: 750px;
-  margin: 0 auto 4.5rem auto;
+  margin: 0 auto 5rem auto;
 }
 
 .section-header span {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-gold);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
   display: block;
 }
 
 .section-header h2 {
   font-family: var(--font-heading);
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
   padding-bottom: 0.75rem;
@@ -186,7 +211,7 @@ p {
   padding: 0.9rem 2.2rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 800;
   border-radius: var(--border-radius-sm);
   text-decoration: none;
   cursor: pointer;
@@ -198,27 +223,29 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-gold); /* Amber Gold */
+  background-color: var(--color-gold); /* Champagne Gold */
   color: var(--color-white);
   border-color: var(--color-gold);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--color-gold-hover);
   border-color: var(--color-gold-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border-color: var(--color-navy);
-  color: var(--color-navy);
+  border-color: var(--color-white);
+  color: var(--color-white);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-navy);
-  color: var(--color-white);
-  transform: translateY(-1px);
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  transform: translateY(-2px);
 }
 
 [data-theme="dark"] .btn-secondary {
@@ -247,7 +274,7 @@ p {
    TOP UTILITY BAR
    ========================================== */
 .top-bar {
-  background-color: var(--color-navy); /* Slate Charcoal */
+  background-color: var(--color-navy); /* Deep Burgundy */
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-body);
   font-size: 0.82rem;
@@ -312,7 +339,7 @@ p {
 }
 
 .btn-top-donate {
-  background-color: var(--color-gold); /* Amber Gold */
+  background-color: var(--color-gold); /* Gold */
   color: var(--color-white);
   border: none;
   padding: 0.4rem 1.1rem;
@@ -336,7 +363,7 @@ header {
   width: 100%;
   background-color: #FFFFFF;
   border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 4px 15px rgba(30, 34, 42, 0.02);
+  box-shadow: 0 4px 15px rgba(128, 24, 36, 0.02);
   z-index: 999;
   transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
 }
@@ -351,7 +378,6 @@ header {
   height: 80px;
 }
 
-/* Clean Logo placement directly in header */
 .logo {
   display: flex;
   align-items: center;
@@ -553,18 +579,18 @@ header {
 }
 
 /* ==========================================
-   WISHFUND FULL-WIDTH HERO WITH CHARCOAL OVERLAY
+   WISHFUND FULL-WIDTH HERO WITH DARK CHARCOAL TINT
    ========================================== */
 .hero {
   position: relative;
   background: url('hero_welfare_bg.png') no-repeat center center/cover;
-  padding: 12rem 0;
+  padding: 14rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #FFFFFF;
-  min-height: 80vh;
+  min-height: 85vh;
   width: 100%;
 }
 
@@ -575,7 +601,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 34, 42, 0.72); /* Premium Slate Charcoal dark overlay */
+  background-color: rgba(30, 24, 20, 0.72); /* Warm Charcoal Overlay */
   z-index: 1;
 }
 
@@ -591,7 +617,7 @@ header {
   color: var(--color-gold); /* Amber Gold */
   font-family: var(--font-body);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1.25rem;
@@ -599,7 +625,7 @@ header {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.8rem, 5.5vw, 4.6rem); /* Playfair Display main heading */
+  font-size: clamp(3rem, 6vw, 4.8rem); /* Playfair Display */
   font-weight: 700;
   line-height: 1.15;
   color: #FFFFFF;
@@ -609,8 +635,8 @@ header {
 
 .hero-desc {
   font-family: var(--font-body);
-  font-size: 1.18rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.22rem;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 2.5rem;
   line-height: 1.8;
   font-weight: 400;
@@ -623,7 +649,14 @@ header {
   flex-wrap: wrap;
 }
 
-/* History / Founders Section (Spacious layout) */
+/* 3D Dynamic Card Tilt Setup */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* History / Founders Section */
 .history {
   background-color: var(--bg-primary);
 }
@@ -655,7 +688,7 @@ header {
 .history-content span {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-gold);
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -693,7 +726,9 @@ header {
   padding-right: 1.5rem;
 }
 
-/* Impact Dashboard Section */
+/* ==========================================
+   REDESIGNED IMPACT STATS DASHBOARD
+   ========================================== */
 .impact {
   background-color: var(--bg-secondary); /* Soft Warm Sand */
   border-top: 1px solid var(--color-border);
@@ -714,18 +749,31 @@ header {
   box-shadow: var(--card-shadow);
   border: 1px solid var(--color-border);
   transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
 }
 
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-gold);
+/* Subtle top golden line decoration */
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-gold);
+  transform: scaleX(0);
+  transition: var(--transition-smooth);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
 }
 
 .stat-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(197, 155, 39, 0.05); /* Warm gold soft background */
+  background-color: rgba(212, 175, 55, 0.06); /* Gold soft background */
   color: var(--color-gold);
   border-radius: 50%;
   display: flex;
@@ -735,14 +783,15 @@ header {
   transition: var(--transition-smooth);
 }
 
-[data-theme="dark"] .stat-icon {
-  background-color: rgba(242, 157, 56, 0.1);
-  color: var(--color-gold);
+.stat-card:hover .stat-icon {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  transform: scale(1.05) translateZ(30px);
 }
 
 .stat-number {
-  font-family: var(--font-body); /* Numbers look clean in Inter */
-  font-size: 3.4rem;
+  font-family: var(--font-body);
+  font-size: 3.6rem;
   font-weight: 800;
   color: var(--color-navy);
   line-height: 1;
@@ -750,14 +799,10 @@ header {
   letter-spacing: -1px;
 }
 
-[data-theme="dark"] .stat-number {
-  color: var(--color-gold);
-}
-
 .stat-label {
   font-family: var(--font-body);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
@@ -768,7 +813,9 @@ header {
   line-height: 1.6;
 }
 
-/* Our Work / Programs Section (Clean grid) */
+/* ==========================================
+   OUR INITIATIVES & PROGRAMS GRID
+   ========================================== */
 .work {
   background-color: var(--bg-primary);
 }
@@ -792,8 +839,6 @@ header {
 }
 
 .program-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--color-gold);
 }
 
@@ -802,6 +847,11 @@ header {
   height: 220px;
   object-fit: cover;
   border-bottom: 1px solid var(--color-border);
+  transition: var(--transition-smooth);
+}
+
+.program-card:hover .program-img {
+  transform: scale(1.03);
 }
 
 .program-info {
@@ -816,19 +866,14 @@ header {
   align-self: flex-start;
   font-family: var(--font-body);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   color: var(--color-gold);
-  background-color: rgba(197, 155, 39, 0.05);
+  background-color: rgba(212, 175, 55, 0.06);
   padding: 0.3rem 0.85rem;
   border-radius: var(--border-radius-sm);
   margin-bottom: 1.25rem;
   letter-spacing: 0.5px;
-}
-
-[data-theme="dark"] .program-tag {
-  color: var(--color-gold);
-  background-color: rgba(242, 157, 56, 0.1);
 }
 
 [dir="rtl"] .program-tag {
@@ -836,7 +881,7 @@ header {
 }
 
 .program-info h3 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   color: var(--text-primary);
   margin-bottom: 0.85rem;
 }
@@ -860,7 +905,7 @@ header {
 .program-stat {
   font-family: var(--font-body);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-gold);
 }
 
@@ -879,15 +924,13 @@ header {
   letter-spacing: 0.5px;
 }
 
-[data-theme="dark"] .program-link {
-  color: var(--color-gold);
-}
-
 .program-link:hover {
   color: var(--color-gold);
 }
 
-/* Board of Trustees Section (Warm Sand theme, No Green backgrounds) */
+/* ==========================================
+   LEADERSHIP & GOVERNANCE OVERHAUL (GLOW ON HOVER)
+   ========================================== */
 .board {
   background-color: var(--bg-secondary); /* Soft Warm Sand background */
   border-top: 1px solid var(--color-border);
@@ -903,7 +946,7 @@ header {
 .board-card {
   background-color: var(--bg-card);
   border-radius: var(--border-radius-md);
-  padding: 3rem 2.25rem;
+  padding: 3.5rem 2.25rem;
   text-align: center;
   box-shadow: var(--card-shadow);
   border: 1px solid var(--color-border);
@@ -911,8 +954,6 @@ header {
 }
 
 .board-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
   border-color: var(--color-gold);
 }
 
@@ -921,14 +962,19 @@ header {
   height: 120px;
   border-radius: 50%;
   margin: 0 auto 1.5rem auto;
-  background-color: #F3EFE9; /* Clean warm grey background */
+  background-color: #F5EFE7; /* Premium sand grey */
   border: 2.5px solid var(--color-gold);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(30, 34, 42, 0.05);
+  box-shadow: 0 6px 15px rgba(128, 24, 36, 0.05);
   transition: var(--transition-smooth);
+}
+
+.board-card:hover .board-avatar {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
 }
 
 .board-avatar-img {
@@ -939,9 +985,16 @@ header {
 }
 
 .board-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   margin-bottom: 0.35rem;
   letter-spacing: -0.2px;
+  transition: var(--transition-smooth);
+}
+
+/* Glamorous glowing title text shadow on hover */
+.board-card:hover h3 {
+  color: var(--color-gold);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
 }
 
 .board-role {
@@ -1013,7 +1066,7 @@ header {
 .form-control:focus {
   outline: none;
   border-color: var(--color-gold);
-  box-shadow: 0 0 0 2px rgba(197, 155, 39, 0.1);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
 }
 
 .contact-info-list {
@@ -1051,7 +1104,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 34, 42, 0.5);
+  background-color: rgba(30, 24, 20, 0.5);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 2000;
@@ -1140,7 +1193,7 @@ header {
 .donation-btn.active {
   border-color: var(--color-gold);
   color: var(--color-gold);
-  background-color: rgba(197, 155, 39, 0.03);
+  background-color: rgba(212, 175, 55, 0.03);
 }
 
 .donation-tabs {
@@ -1168,8 +1221,8 @@ header {
 
 /* Footer */
 footer {
-  background-color: #14171C; /* Premium dark charcoal footer */
-  color: #8C939C;
+  background-color: #1A1514; /* Deep Burgundy Charcoal Footer */
+  color: #99908C;
   padding: 6.5rem 0 3.5rem 0;
   border-top: 3px solid var(--color-gold);
 }
@@ -1190,7 +1243,7 @@ footer {
 }
 
 .footer-brand p {
-  color: #8C939C;
+  color: #99908C;
   font-size: 0.98rem;
   line-height: 1.7;
 }
@@ -1213,7 +1266,7 @@ footer {
 }
 
 .footer-links ul li a {
-  color: #8C939C;
+  color: #99908C;
   text-decoration: none;
   font-size: 0.95rem;
   transition: var(--transition-smooth);
@@ -1237,7 +1290,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #646C75;
+  color: #736864;
   margin: 0;
 }
 
@@ -1248,7 +1301,7 @@ footer {
 }
 
 .footer-bottom-links a {
-  color: #646C75;
+  color: #736864;
   text-decoration: none;
   font-size: 0.85rem;
   transition: var(--transition-smooth);
