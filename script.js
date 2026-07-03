@@ -421,6 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounterAnimations();
   init3DTilt();
   initStarfield();
+  initScrollHeader();
 });
 
 // ==========================================
@@ -794,4 +795,27 @@ function initStarfield() {
   }
   
   animate();
+}
+
+// ==========================================
+// SCROLL SENSITIVE HEADER TRANSITION
+// ==========================================
+function initScrollHeader() {
+  const header = document.querySelector('header');
+  if (!header) return;
+  
+  // Set initial scroll position check
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 }
