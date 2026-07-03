@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BRWT PREMIUM WEBSITE - BURGUNDY, CHAMPAGNE GOLD & 3D OVERHAUL
-   Theme: Burgundy Crimson (#801824) & Champagne Gold (#D4AF37)
+   BRWT PREMIUM WEBSITE - FUTURISTIC STARFIELD & 3D GLASSMORPHISM OVERHAUL
+   Theme: Space Dark (#0A0E1A) & Violet Accent (#7C3AED) & Hot Pink (#EC4899)
    Fonts: Playfair Display (Headings) & Inter (Body)
    ========================================================================== */
 
@@ -8,19 +8,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap');
 
 :root {
-  /* Color Tokens - Premium Warm Luxury Burgundy & Gold Palette */
-  --bg-primary: #FFFFFF;      
-  --bg-secondary: #FAF7F2;    /* Soft Warm Off-White / Sand */
-  --bg-card: #FFFFFF;         
-  --text-primary: #251F1C;    /* Cocoa Charcoal */
-  --text-secondary: #655E5A;  /* Soft Warm Grey */
-  --color-border: #EFEBE5;    /* Warm beige border */
+  /* Color Tokens - Space Dark Futuristic Palette */
+  --bg-primary: #0A0E1A;      /* Deep Space Dark */
+  --bg-secondary: #121829;    /* Dark Indigo Gray */
+  --bg-card: rgba(18, 24, 41, 0.6); /* Semi-transparent Glass Card */
+  --text-primary: #FFFFFF;    /* Pure White */
+  --text-secondary: #94A3B8;  /* Silver Gray */
+  --color-border: rgba(255, 255, 255, 0.08); /* Glowing Soft Border */
   
-  --color-navy: #801824;      /* Primary Deep Burgundy */
-  --color-navy-light: #5C0E17;/* Dark Burgundy */
-  --color-gold: #D4AF37;      /* Secondary Champagne Gold Accent */
-  --color-gold-hover: #B29026;/* Hover Gold */
-  --color-teal: #3A2F2B;      
+  --color-navy: #7C3AED;      /* Primary Violet */
+  --color-navy-light: #5B21B6;/* Dark Violet */
+  --color-gold: #FBBF24;      /* Glowing Yellow Accent */
+  --color-gold-hover: #D97706;/* Hover Amber */
+  --color-teal: #1F2937;      
   --color-white: #FFFFFF;
   
   /* Typography & Layout */
@@ -28,23 +28,24 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-urdu: 'Noto Naskh Arabic', serif;
   
-  --card-shadow: 0 10px 30px rgba(128, 24, 36, 0.03);
-  --shadow-lg: 0 15px 40px rgba(128, 24, 36, 0.06);
-  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --card-shadow: 0 10px 30px rgba(124, 58, 237, 0.04);
+  --shadow-lg: 0 20px 40px rgba(124, 58, 237, 0.12);
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
   --max-width: 1200px;
 }
 
-/* Dark Mode Overrides - Slate & Burgundy Crimson */
-[data-theme="dark"] {
-  --bg-primary: #0F172A;      /* Deep Slate */
-  --bg-secondary: #1E293B;    /* Slate-grey */
-  --bg-card: #1E293B;         
-  --text-primary: #F8FAFC;    
-  --text-secondary: #94A3B8;  
-  --color-border: #334155;    
+/* Dark Mode Fallbacks - The entire theme is dark by default */
+[data-theme="light"] {
+  /* We keep the gorgeous dark mode active to honor the screenshots */
+  --bg-primary: #0A0E1A;
+  --bg-secondary: #121829;
+  --bg-card: rgba(18, 24, 41, 0.6);
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --color-border: rgba(255, 255, 255, 0.08);
 }
 
 /* RTL Specific Rules (Urdu and Sindhi) */
@@ -106,15 +107,15 @@ body {
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
-/* Decorative background blurred blobs for 3D depth feeling */
+/* Background glowing blobs representing space nebula atmosphere */
 body::before {
   content: '';
   position: absolute;
-  top: 10%;
-  left: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.03) 0%, rgba(255,255,255,0) 70%);
+  top: 15%;
+  left: -15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(10, 14, 26, 0) 70%);
   z-index: -1;
   pointer-events: none;
 }
@@ -122,11 +123,11 @@ body::before {
 body::after {
   content: '';
   position: absolute;
-  top: 60%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(128, 24, 36, 0.02) 0%, rgba(255,255,255,0) 70%);
+  top: 55%;
+  right: -15%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, rgba(10, 14, 26, 0) 70%);
   z-index: -1;
   pointer-events: none;
 }
@@ -140,9 +141,10 @@ body::after {
 }
 
 section {
-  padding: 8rem 0;
+  padding: 8.5rem 0;
   width: 100%;
   background-color: var(--bg-primary);
+  position: relative;
 }
 
 .section-header {
@@ -181,7 +183,7 @@ section {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: var(--color-gold);
+  background: linear-gradient(90deg, var(--color-navy), #EC4899);
 }
 
 .section-header p {
@@ -223,17 +225,15 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-gold); /* Champagne Gold */
+  background: linear-gradient(135deg, var(--color-navy), #EC4899); /* Violet to Pink Gradient */
   color: var(--color-white);
-  border-color: var(--color-gold);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  border: none;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-gold-hover);
-  border-color: var(--color-gold-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 6px 25px rgba(236, 72, 153, 0.4);
 }
 
 .btn-secondary {
@@ -244,18 +244,8 @@ p {
 
 .btn-secondary:hover {
   background-color: var(--color-white);
-  color: var(--color-navy);
+  color: #0A0E1A;
   transform: translateY(-2px);
-}
-
-[data-theme="dark"] .btn-secondary {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
-}
-
-[data-theme="dark"] .btn-secondary:hover {
-  background-color: var(--color-gold);
-  color: var(--bg-primary);
 }
 
 .btn-teal {
@@ -274,13 +264,13 @@ p {
    TOP UTILITY BAR
    ========================================== */
 .top-bar {
-  background-color: var(--color-navy); /* Deep Burgundy */
+  background-color: #080B14; /* Deep Space Black */
   color: rgba(255, 255, 255, 0.9);
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 500;
   padding: 0.6rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-border);
   transition: var(--transition-smooth);
 }
 
@@ -339,31 +329,35 @@ p {
 }
 
 .btn-top-donate {
-  background-color: var(--color-gold); /* Gold */
-  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-gold), #F59E0B); /* Glowing Yellow Gradient */
+  color: #0A0E1A;
   border: none;
   padding: 0.4rem 1.1rem;
   border-radius: var(--border-radius-sm);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: var(--transition-smooth);
+  box-shadow: 0 4px 10px rgba(251, 191, 36, 0.2);
 }
 
 .btn-top-donate:hover {
-  background-color: var(--color-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(251, 191, 36, 0.35);
 }
 
-/* Header & Nav (Pure White, Direct Logo Layout) */
+/* Header & Nav (Transparent Glassmorphism) */
 header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: rgba(10, 14, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
-  box-shadow: 0 4px 15px rgba(128, 24, 36, 0.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   z-index: 999;
   transition: background-color var(--transition-smooth), border-color var(--transition-smooth);
 }
@@ -395,13 +389,14 @@ header {
 }
 
 .logo:hover .logo-badge {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .logo-badge-img {
   height: 100%;
   width: auto;
   object-fit: contain;
+  filter: brightness(1.2); /* Make sure green logo sits cleanly and brightens up on dark */
 }
 
 .logo-text-wrapper {
@@ -413,7 +408,7 @@ header {
   font-family: var(--font-body);
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--color-navy);
+  color: #FFFFFF;
   letter-spacing: -0.5px;
   line-height: 1.15;
 }
@@ -425,7 +420,7 @@ header {
 .logo-sub {
   font-family: var(--font-body);
   font-size: 0.72rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -440,7 +435,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #334155;
+  color: #CBD5E1;
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 600;
@@ -484,11 +479,11 @@ header {
 }
 
 .lang-btn {
-  background: transparent;
-  border: 1px solid #CBD5E1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
   padding: 0.45rem 0.9rem;
   border-radius: var(--border-radius-sm);
-  color: #334155;
+  color: #E2E8F0;
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 600;
@@ -500,16 +495,16 @@ header {
 }
 
 .lang-btn:hover {
-  border-color: var(--color-navy);
-  color: var(--color-navy);
+  border-color: var(--color-gold);
+  color: #FFFFFF;
 }
 
 .lang-dropdown {
   position: absolute;
   top: 120%;
   right: 0;
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background-color: #121829;
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-lg);
   list-style: none;
@@ -538,18 +533,18 @@ header {
   font-size: 0.88rem;
   font-family: var(--font-body);
   transition: var(--transition-smooth);
-  color: #334155;
+  color: #CBD5E1;
 }
 
 .lang-dropdown li:hover {
-  background-color: #F8F9FA;
-  color: var(--color-navy);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-gold);
 }
 
 .theme-toggle {
   background: none;
   border: none;
-  color: #334155;
+  color: #CBD5E1;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
@@ -560,8 +555,8 @@ header {
 }
 
 .theme-toggle:hover {
-  background-color: #F1F5F9;
-  color: var(--color-navy);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-gold);
 }
 
 .theme-toggle svg {
@@ -573,90 +568,160 @@ header {
   display: none;
   background: none;
   border: none;
-  color: #334155;
+  color: #FFFFFF;
   font-size: 1.6rem;
   cursor: pointer;
 }
 
 /* ==========================================
-   WISHFUND FULL-WIDTH HERO WITH DARK CHARCOAL TINT
+   DYNAMIC HERO SECTION WITH STARFIELD CANVAS
    ========================================== */
 .hero {
   position: relative;
-  background: url('hero_welfare_bg.png') no-repeat center center/cover;
-  padding: 14rem 0;
+  overflow: hidden;
+  padding: 14rem 0 10rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #FFFFFF;
-  min-height: 85vh;
+  min-height: 90vh;
   width: 100%;
+  background: radial-gradient(circle at 50% 50%, #111827 0%, #070B14 100%);
 }
 
-.hero::before {
-  content: '';
+#starfieldCanvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 24, 20, 0.72); /* Warm Charcoal Overlay */
   z-index: 1;
+  pointer-events: none;
+}
+
+/* Atmospheric circular light gradient behind text */
+.hero-glow-bg {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(10, 14, 26, 0) 70%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero-container {
   position: relative;
-  z-index: 2;
-  max-width: 850px;
+  z-index: 3;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
 .hero-subtitle {
-  color: var(--color-gold); /* Amber Gold */
+  color: var(--color-gold); /* Yellow Accent */
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 4.8rem); /* Playfair Display */
+  font-size: clamp(3.2rem, 6.5vw, 5.2rem); /* Playfair Display huge */
   font-weight: 700;
   line-height: 1.15;
   color: #FFFFFF;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
   letter-spacing: -0.5px;
 }
 
 .hero-desc {
   font-family: var(--font-body);
-  font-size: 1.22rem;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 2.5rem;
+  font-size: 1.25rem;
+  color: #E2E8F0;
+  margin-bottom: 3rem;
   line-height: 1.8;
   font-weight: 400;
 }
 
 .hero-btns {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/* 3D Dynamic Card Tilt Setup */
+/* ==========================================
+   FLOATING 3D GLASS SHAPES (Pure CSS elements)
+   ========================================== */
+.floating-3d {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Glowing Sphere with 3D gradient shading */
+.floating-sphere-1 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #EC4899, #7C3AED 70%, #1E1B4B 100%);
+  box-shadow: inset -5px -5px 15px rgba(0,0,0,0.6), 0 10px 30px rgba(124, 58, 237, 0.4);
+  top: 15%;
+  left: 8%;
+  animation: floating-float-1 8s infinite alternate ease-in-out;
+}
+
+.floating-sphere-2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--color-gold), #D97706 70%, #451A03 100%);
+  box-shadow: inset -3px -3px 10px rgba(0,0,0,0.6), 0 8px 25px rgba(245, 158, 11, 0.35);
+  bottom: 12%;
+  right: 10%;
+  animation: floating-float-2 9s infinite alternate ease-in-out;
+}
+
+/* 3D Glass Toro / Donut Ring shape style */
+.floating-torus-1 {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 18px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15), inset 0 10px 30px rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+  top: 60%;
+  left: 5%;
+  animation: floating-float-2 10s infinite alternate ease-in-out;
+}
+
+@keyframes floating-float-1 {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-15px) rotate(90deg) scale(1.05); }
+  100% { transform: translateY(0) rotate(180deg) scale(1); }
+}
+
+@keyframes floating-float-2 {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(18px) rotate(-90deg) scale(0.95); }
+  100% { transform: translateY(0) rotate(-180deg) scale(1); }
+}
+
+/* 3D Interactive Card Tilt Setup */
 .tilt-card {
   transform-style: preserve-3d;
   will-change: transform;
   transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* History / Founders Section */
+/* History / Founders Section (Spacious layout) */
 .history {
   background-color: var(--bg-primary);
 }
@@ -682,7 +747,7 @@ header {
   height: auto;
   object-fit: contain;
   z-index: 2;
-  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.06));
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.25));
 }
 
 .history-content span {
@@ -707,6 +772,7 @@ header {
   margin-bottom: 1.25rem;
   line-height: 1.8;
   font-size: 1.05rem;
+  color: var(--text-secondary);
 }
 
 .history-quote {
@@ -727,10 +793,10 @@ header {
 }
 
 /* ==========================================
-   REDESIGNED IMPACT STATS DASHBOARD
+   DARK GLASSMORPHISM STATS DASHBOARD
    ========================================== */
 .impact {
-  background-color: var(--bg-secondary); /* Soft Warm Sand */
+  background-color: var(--bg-secondary); /* Dark Indigo Gray */
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -743,6 +809,8 @@ header {
 
 .stat-card {
   background-color: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--border-radius-md);
   padding: 3.5rem 2.25rem;
   text-align: center;
@@ -753,7 +821,7 @@ header {
   overflow: hidden;
 }
 
-/* Subtle top golden line decoration */
+/* Vibrant glowing linear line animation on hover */
 .stat-card::before {
   content: '';
   position: absolute;
@@ -761,7 +829,7 @@ header {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--color-gold);
+  background: linear-gradient(90deg, var(--color-navy), #EC4899);
   transform: scaleX(0);
   transition: var(--transition-smooth);
 }
@@ -773,7 +841,7 @@ header {
 .stat-icon {
   width: 60px;
   height: 60px;
-  background-color: rgba(212, 175, 55, 0.06); /* Gold soft background */
+  background-color: rgba(124, 58, 237, 0.1);
   color: var(--color-gold);
   border-radius: 50%;
   display: flex;
@@ -781,19 +849,21 @@ header {
   justify-content: center;
   margin: 0 auto 1.5rem auto;
   transition: var(--transition-smooth);
+  border: 1px solid rgba(124, 58, 237, 0.2);
 }
 
 .stat-card:hover .stat-icon {
-  background-color: var(--color-navy);
+  background: linear-gradient(135deg, var(--color-navy), #EC4899);
   color: var(--color-white);
   transform: scale(1.05) translateZ(30px);
+  border-color: transparent;
 }
 
 .stat-number {
   font-family: var(--font-body);
   font-size: 3.6rem;
   font-weight: 800;
-  color: var(--color-navy);
+  color: #FFFFFF;
   line-height: 1;
   margin-bottom: 0.6rem;
   letter-spacing: -1px;
@@ -814,7 +884,7 @@ header {
 }
 
 /* ==========================================
-   OUR INITIATIVES & PROGRAMS GRID
+   OUR INITIATIVES & PROGRAMS GRID (GLASS EFFECT)
    ========================================== */
 .work {
   background-color: var(--bg-primary);
@@ -828,6 +898,8 @@ header {
 
 .program-card {
   background-color: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--border-radius-md);
   overflow: hidden;
   box-shadow: var(--card-shadow);
@@ -839,7 +911,7 @@ header {
 }
 
 .program-card:hover {
-  border-color: var(--color-gold);
+  border-color: rgba(124, 58, 237, 0.4);
 }
 
 .program-img {
@@ -869,7 +941,7 @@ header {
   font-weight: 800;
   text-transform: uppercase;
   color: var(--color-gold);
-  background-color: rgba(212, 175, 55, 0.06);
+  background-color: rgba(251, 191, 36, 0.1);
   padding: 0.3rem 0.85rem;
   border-radius: var(--border-radius-sm);
   margin-bottom: 1.25rem;
@@ -913,7 +985,7 @@ header {
   font-family: var(--font-body);
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--color-navy);
+  color: var(--color-gold);
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
@@ -925,14 +997,14 @@ header {
 }
 
 .program-link:hover {
-  color: var(--color-gold);
+  color: #FFFFFF;
 }
 
 /* ==========================================
-   LEADERSHIP & GOVERNANCE OVERHAUL (GLOW ON HOVER)
+   LEADERSHIP & GOVERNANCE OVERHAUL (GOLD-NEON GLOW)
    ========================================== */
 .board {
-  background-color: var(--bg-secondary); /* Soft Warm Sand background */
+  background-color: var(--bg-secondary); /* Dark Indigo Gray background */
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -945,6 +1017,8 @@ header {
 
 .board-card {
   background-color: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--border-radius-md);
   padding: 3.5rem 2.25rem;
   text-align: center;
@@ -954,7 +1028,7 @@ header {
 }
 
 .board-card:hover {
-  border-color: var(--color-gold);
+  border-color: rgba(124, 58, 237, 0.4);
 }
 
 .board-avatar {
@@ -962,19 +1036,20 @@ header {
   height: 120px;
   border-radius: 50%;
   margin: 0 auto 1.5rem auto;
-  background-color: #F5EFE7; /* Premium sand grey */
-  border: 2.5px solid var(--color-gold);
+  background-color: rgba(255, 255, 255, 0.03); 
+  border: 2.5px solid var(--color-navy);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 15px rgba(128, 24, 36, 0.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   transition: var(--transition-smooth);
 }
 
 .board-card:hover .board-avatar {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+  border-color: var(--color-gold);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
 }
 
 .board-avatar-img {
@@ -989,12 +1064,13 @@ header {
   margin-bottom: 0.35rem;
   letter-spacing: -0.2px;
   transition: var(--transition-smooth);
+  color: #FFFFFF;
 }
 
-/* Glamorous glowing title text shadow on hover */
+/* Beautiful Glowing neon amber/gold text shadow on hover */
 .board-card:hover h3 {
   color: var(--color-gold);
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+  text-shadow: 0 0 15px rgba(251, 191, 36, 0.8);
 }
 
 .board-role {
@@ -1026,7 +1102,7 @@ header {
 }
 
 .contact-card {
-  background-color: var(--bg-secondary); /* Soft Warm Sand background */
+  background-color: var(--bg-secondary); 
   border-radius: var(--border-radius-md);
   padding: 3.5rem;
   box-shadow: var(--card-shadow);
@@ -1056,7 +1132,7 @@ header {
   padding: 0.9rem 1.1rem;
   border-radius: var(--border-radius-sm);
   border: 1px solid var(--color-border);
-  background-color: var(--bg-primary);
+  background-color: rgba(255, 255, 255, 0.03);
   color: var(--text-primary);
   font-family: inherit;
   font-size: 0.95rem;
@@ -1065,8 +1141,8 @@ header {
 
 .form-control:focus {
   outline: none;
-  border-color: var(--color-gold);
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
 }
 
 .contact-info-list {
@@ -1097,16 +1173,16 @@ header {
   color: var(--text-secondary);
 }
 
-/* Modals */
+/* Modals (Glassmorphism layout) */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 24, 20, 0.5);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(5, 7, 13, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 2000;
   display: flex;
   align-items: center;
@@ -1123,7 +1199,7 @@ header {
 }
 
 .modal-content {
-  background-color: var(--bg-card);
+  background-color: #121829;
   border-radius: var(--border-radius-md);
   max-width: 580px;
   width: 100%;
@@ -1178,7 +1254,7 @@ header {
 }
 
 .donation-btn {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--color-border);
   padding: 0.8rem;
   border-radius: var(--border-radius-sm);
@@ -1193,7 +1269,7 @@ header {
 .donation-btn.active {
   border-color: var(--color-gold);
   color: var(--color-gold);
-  background-color: rgba(212, 175, 55, 0.03);
+  background-color: rgba(251, 191, 36, 0.05);
 }
 
 .donation-tabs {
@@ -1221,8 +1297,8 @@ header {
 
 /* Footer */
 footer {
-  background-color: #1A1514; /* Deep Burgundy Charcoal Footer */
-  color: #99908C;
+  background-color: #06080F; /* Ultra Dark Footer */
+  color: #94A3B8;
   padding: 6.5rem 0 3.5rem 0;
   border-top: 3px solid var(--color-gold);
 }
@@ -1243,7 +1319,7 @@ footer {
 }
 
 .footer-brand p {
-  color: #99908C;
+  color: #94A3B8;
   font-size: 0.98rem;
   line-height: 1.7;
 }
@@ -1266,7 +1342,7 @@ footer {
 }
 
 .footer-links ul li a {
-  color: #99908C;
+  color: #94A3B8;
   text-decoration: none;
   font-size: 0.95rem;
   transition: var(--transition-smooth);
@@ -1279,7 +1355,7 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-border);
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -1290,7 +1366,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #736864;
+  color: #64748B;
   margin: 0;
 }
 
@@ -1301,7 +1377,7 @@ footer {
 }
 
 .footer-bottom-links a {
-  color: #736864;
+  color: #64748B;
   text-decoration: none;
   font-size: 0.85rem;
   transition: var(--transition-smooth);
@@ -1335,6 +1411,9 @@ footer {
 @media (max-width: 1200px) {
   .container {
     padding: 0 1.5rem;
+  }
+  .floating-3d {
+    display: none; /* Hide 3D shapes on tablet/mobile to avoid overlapping */
   }
 }
 
@@ -1420,13 +1499,13 @@ footer {
     left: -100%;
     width: 100%;
     height: calc(100vh - 75px);
-    background-color: #FFFFFF;
+    background-color: #0A0E1A;
     flex-direction: column;
     padding: 3rem 1.5rem;
     gap: 1.5rem;
     align-items: center;
     transition: var(--transition-smooth);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     z-index: 999;
   }
   
@@ -1439,7 +1518,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 0.5rem 0;
-    color: #334155;
+    color: #CBD5E1;
   }
   
   .btn-nav {

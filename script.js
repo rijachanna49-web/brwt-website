@@ -420,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initCounterAnimations();
   init3DTilt();
+  initStarfield();
 });
 
 // ==========================================
@@ -712,4 +713,85 @@ function init3DTilt() {
       card.style.boxShadow = 'var(--card-shadow)';
     });
   });
+}
+
+// ==========================================
+// TWINKLING STARFIELD & SNOWFALL PARTICLE PHYSICS
+// ==========================================
+function initStarfield() {
+  const canvas = document.getElementById('starfieldCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  
+  let width = canvas.width = canvas.offsetWidth;
+  let height = canvas.height = canvas.offsetHeight;
+  
+  // Handle resize
+  window.addEventListener('resize', () => {
+    width = canvas.width = canvas.offsetWidth;
+    height = canvas.height = canvas.offsetHeight;
+  });
+  
+  const particles = [];
+  const maxParticles = 120;
+  
+  // Generate star particles
+  for (let i = 0; i < maxParticles; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 1.6 + 0.4,
+      speedY: Math.random() * 0.35 + 0.05, // Slow drift downwards
+      speedX: (Math.random() - 0.5) * 0.15, // Soft wind drift
+      opacity: Math.random(),
+      fadeSpeed: Math.random() * 0.015 + 0.005,
+      fading: Math.random() > 0.5
+    });
+  }
+  
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    
+    for (let i = 0; i < maxParticles; i++) {
+      const p = particles[i];
+      
+      // Update opacity for twinkling
+      if (p.fading) {
+        p.opacity -= p.fadeSpeed;
+        if (p.opacity <= 0.15) {
+          p.fading = false;
+        }
+      } else {
+        p.opacity += p.fadeSpeed;
+        if (p.opacity >= 0.85) {
+          p.fading = true;
+        }
+      }
+      
+      // Update position
+      p.y += p.speedY;
+      p.x += p.speedX;
+      
+      // Wrap around edges
+      if (p.y > height) {
+        p.y = 0;
+        p.x = Math.random() * width;
+      }
+      if (p.x > width) {
+        p.x = 0;
+      } else if (p.x < 0) {
+        p.x = width;
+      }
+      
+      // Draw particle
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+      ctx.fill();
+    }
+    
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
 }
