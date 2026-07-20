@@ -110,12 +110,48 @@
     <div class="floating-3d floating-torus-1"></div>
     
     <div class="hero-container animate-fade-in">
-      <div class="hero-content-wrapper">
-        <span class="hero-subtitle" data-i18n="hero_badge">Small Help Can Make Change</span>
-        <h1 class="hero-title" data-i18n="hero_heading">New Hope for the Future</h1>
-        <p class="hero-desc" data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
-        <div class="hero-btns">
-          <button class="btn btn-hero-gradient" onclick="openDonateModal()" data-i18n="hero_btn_donate">Donate Today</button>
+      <div class="hero-grid-split">
+        <!-- Left Side: Text and CTA Info -->
+        <div class="hero-content-wrapper">
+          <span class="hero-subtitle" data-i18n="hero_badge">Small Help Can Make Change</span>
+          <h1 class="hero-title" data-i18n="hero_heading">New Hope for the <span>Future</span></h1>
+          <p class="hero-desc" data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
+          
+          <div class="hero-btns">
+            <button class="btn btn-aimm-purple" onclick="openDonateModal()" data-i18n="hero_btn_donate">Donate Today</button>
+            <button class="btn btn-aimm-outline" onclick="openProgramModal('edu')">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Our Story
+            </button>
+          </div>
+
+          <!-- Aimm-style Bottom Columns -->
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div class="hero-feature-text">
+                <h4 data-i18n="prog_edu_title">Web & IT Education</h4>
+                <p>Free full-stack coding labs in rural Sindh.</p>
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+              </div>
+              <div class="hero-feature-text">
+                <h4>Welfare & Relief</h4>
+                <p>Eye camps, hand pumps, and disaster response.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: 3D Illustration Render -->
+        <div class="hero-illustration-wrapper">
+          <img src="hero_3d_aimm_illustration.png" alt="BRWT 3D Mascot Render" class="hero-3d-image">
         </div>
       </div>
     </div>

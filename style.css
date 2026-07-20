@@ -1,6 +1,6 @@
 /* ==========================================================================
-   BRWT PREMIUM WEBSITE - EXACT VECTOR WAVE SCREENSHOT OVERHAUL
-   Theme: Space Dark (#0A0E1A) & Violet Accent (#7C3AED) & Hot Pink (#EC4899)
+   BRWT PREMIUM WEBSITE - FUTURISTIC 3D GLASSMORPHISM OVERHAUL (AIMM STYLE)
+   Theme: Space Dark (#0D111D) & Violet Accent (#7C3AED) & Hot Pink (#EC4899)
    Fonts: Playfair Display (Headings) & Inter (Body)
    ========================================================================== */
 
@@ -9,9 +9,9 @@
 
 :root {
   /* Color Tokens - Space Dark Futuristic Palette */
-  --bg-primary: #0A0E1A;      /* Deep Space Dark */
-  --bg-secondary: #121829;    /* Dark Indigo Gray */
-  --bg-card: rgba(18, 24, 41, 0.6); /* Semi-transparent Glass Card */
+  --bg-primary: #0D111D;      /* Deep Space Dark */
+  --bg-secondary: #161B2E;    /* Dark Indigo Gray */
+  --bg-card: rgba(22, 27, 46, 0.6); /* Semi-transparent Glass Card */
   --text-primary: #FFFFFF;    /* Pure White */
   --text-secondary: #94A3B8;  /* Silver Gray */
   --color-border: rgba(255, 255, 255, 0.08); /* Glowing Soft Border */
@@ -39,9 +39,9 @@
 
 /* Dark Mode Fallbacks */
 [data-theme="light"] {
-  --bg-primary: #0A0E1A;
-  --bg-secondary: #121829;
-  --bg-card: rgba(18, 24, 41, 0.6);
+  --bg-primary: #0D111D;
+  --bg-secondary: #161B2E;
+  --bg-card: rgba(22, 27, 46, 0.6);
   --text-primary: #FFFFFF;
   --text-secondary: #94A3B8;
   --color-border: rgba(255, 255, 255, 0.08);
@@ -114,7 +114,7 @@ body::before {
   left: -15%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(10, 14, 26, 0) 70%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(13, 17, 29, 0) 70%);
   z-index: -1;
   pointer-events: none;
 }
@@ -126,7 +126,7 @@ body::after {
   right: -15%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, rgba(10, 14, 26, 0) 70%);
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.06) 0%, rgba(13, 17, 29, 0) 70%);
   z-index: -1;
   pointer-events: none;
 }
@@ -243,7 +243,7 @@ p {
 
 .btn-secondary:hover {
   background-color: var(--color-white);
-  color: #0A0E1A;
+  color: #0D111D;
   transform: translateY(-2px);
 }
 
@@ -282,7 +282,7 @@ header {
 /* Scroll Active Header class toggled by JS */
 header.scrolled {
   position: fixed;
-  background-color: rgba(10, 14, 26, 0.95);
+  background-color: rgba(13, 17, 29, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -362,7 +362,7 @@ header.scrolled {
 
 .nav-links a {
   text-decoration: none;
-  color: #FFFFFF; /* Matches screenshot white link color */
+  color: #FFFFFF; 
   font-family: var(--font-body);
   font-size: 0.92rem;
   font-weight: 600;
@@ -430,7 +430,7 @@ header.scrolled {
   position: absolute;
   top: 120%;
   right: 0;
-  background-color: #121829;
+  background-color: #161B2E;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-lg);
@@ -501,22 +501,18 @@ header.scrolled {
 }
 
 /* ==========================================
-   EXACT SPLIT WAVE HERO LAYOUT
-   Left side: Pure White backdrop, dark text.
-   Right side: Vector Wave background illustration.
+   AIMM DARK MODE HERO GRID SPLIT LAYOUT
    ========================================== */
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 16rem 0 12rem 0;
+  padding: 14rem 0 10rem 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  text-align: left;
+  justify-content: center;
   min-height: 95vh;
   width: 100%;
-  /* Loads vector illustration on the right, pure white on the left */
-  background: #FFFFFF url('hero_vector_illustration.png') no-repeat right center/cover;
+  background-color: #0D111D; /* Aimm Deep Dark background */
 }
 
 /* Canvas runs absolutely inside the hero bounds */
@@ -531,7 +527,15 @@ header.scrolled {
 }
 
 .hero-glow-bg {
-  display: none; /* Removed glow overlay to maintain crisp vector details */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108, 93, 211, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(13, 17, 29, 0) 70%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero-container {
@@ -543,19 +547,26 @@ header.scrolled {
   width: 100%;
 }
 
-.hero-content-wrapper {
-  max-width: 50%; /* Text occupies left half only (white area) */
+.hero-grid-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4.5rem;
+  align-items: center;
+  text-align: left;
 }
 
-[dir="rtl"] .hero-content-wrapper {
-  margin-right: 0;
-  margin-left: auto;
+[dir="rtl"] .hero-grid-split {
+  text-align: right;
+}
+
+.hero-content-wrapper {
+  max-width: 100%;
 }
 
 .hero-subtitle {
-  color: var(--color-navy); /* Purple/Violet subtitle */
+  color: var(--color-gold); /* Yellow Accent */
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -565,18 +576,26 @@ header.scrolled {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 5.5vw, 4.5rem); 
+  font-size: clamp(3.2rem, 6vw, 4.8rem); 
   font-weight: 800;
   line-height: 1.15;
-  color: #0F172A; /* Dark navy text to contrast white background */
+  color: #FFFFFF;
   margin-bottom: 2rem;
   letter-spacing: -0.5px;
+}
+
+/* Beautiful Text Gradient on the highlighted word */
+.hero-title span {
+  background: linear-gradient(135deg, #EC4899, #8B5CF6, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .hero-desc {
   font-family: var(--font-body);
   font-size: 1.2rem;
-  color: #475569; /* Slate grey body text */
+  color: #94A3B8; /* Silver grey body text */
   margin-bottom: 3rem;
   line-height: 1.8;
   font-weight: 400;
@@ -585,26 +604,158 @@ header.scrolled {
 .hero-btns {
   display: flex;
   gap: 1.5rem;
-  justify-content: flex-start; /* Aligns buttons left */
+  justify-content: flex-start; 
   flex-wrap: wrap;
 }
 
-/* Pill Shaped Violet to Hot Pink Gradient CTA Button */
-.btn-hero-gradient {
-  background: linear-gradient(135deg, #7C3AED, #EC4899);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 50px; /* Perfect rounded pill shape */
-  padding: 0.95rem 2.8rem;
-  font-weight: 800;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+[dir="rtl"] .hero-btns {
+  justify-content: flex-start;
 }
 
-.btn-hero-gradient:hover {
+/* Violet Pill Button (Aimm style "Get the app") */
+.btn-aimm-purple {
+  background: linear-gradient(135deg, #6C5DD3, #8B5CF6);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px; /* Rounded pill */
+  padding: 0.95rem 2.8rem;
+  font-weight: 800;
+  box-shadow: 0 8px 25px rgba(108, 93, 211, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-aimm-purple:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(236, 72, 153, 0.45);
+  box-shadow: 0 12px 30px rgba(108, 93, 211, 0.5);
+}
+
+/* Transparent Outline Button (Aimm style "Video intro") */
+.btn-aimm-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 0.95rem 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-aimm-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-aimm-outline svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-gold);
+}
+
+/* ==========================================
+   AIMM HERO BOTTOM FEATURES (Prebuilt templates style columns)
+   ========================================== */
+.hero-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 4.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2.5rem;
+}
+
+.hero-feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.hero-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.hero-feature-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-feature-text h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.hero-feature-text p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 3D Illustration right column */
+.hero-illustration-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-3d-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 50px rgba(0,0,0,0.4));
+  animation: float-aimm-slow 8s infinite alternate ease-in-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@keyframes float-aimm-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Header Button outline styling (Aimm "Sign up") */
+.btn-top-donate {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  padding: 0.5rem 1.3rem;
+  border-radius: 50px; /* Pill button */
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-top-donate:hover {
+  background-color: #FFFFFF;
+  color: #0D111D;
+  border-color: #FFFFFF;
+  transform: translateY(-1px);
 }
 
 /* 3D Floating Shapes decorations placed inside hero bounds */
@@ -621,7 +772,7 @@ header.scrolled {
   background: radial-gradient(circle at 30% 30%, #EC4899, #7C3AED 70%, #1E1B4B 100%);
   box-shadow: inset -5px -5px 15px rgba(0,0,0,0.6), 0 10px 30px rgba(124, 58, 237, 0.4);
   top: 15%;
-  left: 45%; /* Sits close to the wave separator boundary */
+  left: 8%; 
   animation: floating-float-1 8s infinite alternate ease-in-out;
 }
 
@@ -631,8 +782,8 @@ header.scrolled {
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, var(--color-gold), #D97706 70%, #451A03 100%);
   box-shadow: inset -3px -3px 10px rgba(0,0,0,0.6), 0 8px 25px rgba(245, 158, 11, 0.35);
-  bottom: 15%;
-  right: 5%;
+  bottom: 12%;
+  right: 10%;
   animation: floating-float-2 9s infinite alternate ease-in-out;
 }
 
@@ -645,7 +796,7 @@ header.scrolled {
   background-color: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(5px);
   top: 60%;
-  left: 42%;
+  left: 5%;
   animation: floating-float-2 10s infinite alternate ease-in-out;
 }
 
@@ -661,14 +812,7 @@ header.scrolled {
   100% { transform: translateY(0) rotate(-180deg) scale(1); }
 }
 
-/* 3D Interactive Card Tilt Setup */
-.tilt-card {
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.15s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.15s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* History / Founders Section (Spacious layout) */
+/* History / Founders Section */
 .history {
   background-color: var(--bg-primary);
 }
@@ -743,7 +887,7 @@ header.scrolled {
    DARK GLASSMORPHISM STATS DASHBOARD
    ========================================== */
 .impact {
-  background-color: var(--bg-secondary); /* Dark Indigo Gray */
+  background-color: var(--bg-secondary); 
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -950,7 +1094,7 @@ header.scrolled {
    LEADERSHIP & GOVERNANCE OVERHAUL (GOLD-NEON GLOW)
    ========================================== */
 .board {
-  background-color: var(--bg-secondary); /* Dark Indigo Gray background */
+  background-color: var(--bg-secondary); 
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -1144,7 +1288,7 @@ header.scrolled {
 }
 
 .modal-content {
-  background-color: #121829;
+  background-color: #161B2E;
   border-radius: var(--border-radius-md);
   max-width: 580px;
   width: 100%;
@@ -1242,7 +1386,7 @@ header.scrolled {
 
 /* Footer */
 footer {
-  background-color: #06080F; /* Ultra Dark Footer */
+  background-color: #080B14; /* Ultra Dark Footer */
   color: #94A3B8;
   padding: 6.5rem 0 3.5rem 0;
   border-top: 3px solid var(--color-gold);
@@ -1360,9 +1504,6 @@ footer {
   .floating-3d {
     display: none; /* Hide 3D shapes on tablet/mobile to avoid overlapping */
   }
-  .hero-content-wrapper {
-    max-width: 60%;
-  }
 }
 
 /* 2. Tablet Layout */
@@ -1371,18 +1512,19 @@ footer {
     padding: 5.5rem 0;
   }
   
-  .hero-grid {
+  .hero-grid-split {
     grid-template-columns: 1fr;
     gap: 3.5rem;
     text-align: center;
   }
   
-  .hero-content {
-    max-width: 100%;
+  .hero-btns {
+    justify-content: center;
   }
   
-  .hero-actions {
+  .hero-features {
     justify-content: center;
+    grid-template-columns: 1fr 1fr;
   }
   
   .history-grid {
@@ -1443,7 +1585,7 @@ footer {
     left: -100%;
     width: 100%;
     height: calc(100vh - 75px);
-    background-color: #0A0E1A;
+    background-color: #0D111D;
     flex-direction: column;
     padding: 3rem 1.5rem;
     gap: 1.5rem;
@@ -1475,18 +1617,9 @@ footer {
     display: block;
   }
   
-  /* Hero typography for mobile */
+  /* Hero typography */
   .hero {
     padding: 10rem 0 5rem 0;
-    background: #FFFFFF url('hero_vector_illustration.png') no-repeat right center/cover;
-  }
-  
-  .hero-content-wrapper {
-    max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: var(--border-radius-md);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   }
   
   .hero-content h1 {
@@ -1495,6 +1628,11 @@ footer {
   
   .hero-content p {
     font-size: 1.08rem;
+  }
+  
+  .hero-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .spotlight-card {
