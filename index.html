@@ -209,7 +209,7 @@
           <div class="stat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </div>
-          <div class="stat-number" data-target="28">0</div>
+          <div class="stat-number" data-target="2800">0</div>
           <div class="stat-label" data-i18n="stat_eye_label">Cataract Surgeries</div>
           <div class="stat-desc" data-i18n="stat_eye_desc">Performed successfully across 16 mobile clinical eye camps.</div>
         </div>
@@ -264,53 +264,167 @@
             <h3 data-i18n="prog_edu_title">Web & IT Education</h3>
             <p data-i18n="prog_edu_desc">Empowering rural youth by establishing computer labs and providing fully free training in full-stack web development, turning them into independent earners.</p>
             <div class="program-footer">
-              <span class="program-stat">7,000+ Trained</span>
+              <span class="program-stat">10+ Labs | 7,000+ Trained</span>
               <a class="program-link" onclick="openProgramModal('edu')" data-i18n="prog_learn_more">Learn More &rarr;</a>
             </div>
           </div>
         </div>
         
-        <!-- Program 2: Health -->
+        <!-- Program 2: General Medical Camps -->
         <div class="program-card tilt-card">
           <img src="trust_health_banner.png" alt="Health Banner" class="program-img">
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_health_tag">Healthcare</span>
-            <h3 data-i18n="prog_health_title">Public Health Awareness</h3>
-            <p data-i18n="prog_health_desc">Active Hepatitis B/C and HIV/AIDS diagnostic screening campaigns to check and guide patients in rural Sindh under collaborations with APPNA and APGNA.</p>
+            <h3 data-i18n="prog_med_title">General Medical Camps</h3>
+            <p data-i18n="prog_med_desc">Providing free diagnostics, doctor consultations, and quality prescription medicines to remote regions of Sindh, Punjab, and Balochistan.</p>
             <div class="program-footer">
-              <span class="program-stat">16 Eye Camps</span>
+              <span class="program-stat">50+ Camps | 25,000+ Treated</span>
               <a class="program-link" onclick="openProgramModal('health')" data-i18n="prog_learn_more">Learn More &rarr;</a>
             </div>
           </div>
         </div>
+
+        <!-- Program 3: Free Eye Camps -->
+        <div class="program-card tilt-card">
+          <img src="hero_welfare_bg.png" alt="Eye Camps Banner" class="program-img">
+          <div class="program-info">
+            <span class="program-tag" data-i18n="prog_health_tag">Healthcare</span>
+            <h3 data-i18n="prog_eye_title">Free Eye Camps</h3>
+            <p data-i18n="prog_eye_desc">Restoring vision through mobile eye clinics, prescription glasses, and 100% sponsored cataract surgeries performed by top surgeons.</p>
+            <div class="program-footer">
+              <span class="program-stat">30+ Camps | 2,800+ Surgeries</span>
+              <a class="program-link" onclick="openProgramModal('eye')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
         
-        <!-- Program 3: Water -->
+        <!-- Program 4: Water Access -->
         <div class="program-card tilt-card">
           <img src="water_pump_sindh.png" alt="Clean Water Access" class="program-img">
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_water_tag">Water & Sanitation</span>
-            <h3 data-i18n="prog_water_title">Clean Water Access</h3>
-            <p data-i18n="prog_water_desc">Installing over 3,000 hand pumps and water wells to bring clean, disease-free drinking water right to the doorsteps of underprivileged communities.</p>
+            <h3 data-i18n="prog_water_title">Clean Water Projects</h3>
+            <p data-i18n="prog_water_desc">Installing over 3,000 hand pumps and filtration plants to bring clean, disease-free drinking water right to the doorsteps of underprivileged villages.</p>
             <div class="program-footer">
-              <span class="program-stat">3,000+ Installed</span>
+              <span class="program-stat">3,000+ Pumps | 50,000+ Served</span>
               <a class="program-link" onclick="openProgramModal('water')" data-i18n="prog_learn_more">Learn More &rarr;</a>
             </div>
           </div>
         </div>
 
-        <!-- Program 4: Khaireen -->
+        <!-- Program 5: Vocational Support -->
         <div class="program-card tilt-card">
-          <div class="program-img" style="background: linear-gradient(135deg, var(--color-navy), var(--color-gold)); display: flex; align-items: center; justify-content: center; color: white; height: 220px;">
+          <div class="program-img" style="background: linear-gradient(135deg, var(--color-navy), var(--color-gold)); display: flex; align-items: center; justify-content: center; color: white; height: 200px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <div class="program-info">
+            <span class="program-tag">Vocational</span>
+            <h3>Vocational Centers</h3>
+            <p>Empowering women and young men with sewing, tailoring, and practical technical skills for financial independence.</p>
+            <div class="program-footer">
+              <span class="program-stat">12+ Centers | 2,000+ Trained</span>
+              <a class="program-link" onclick="openProgramModal('vocational')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 6: Scholarships -->
+        <div class="program-card tilt-card">
+          <div class="program-img" style="background: linear-gradient(135deg, var(--color-orange), var(--color-navy)); display: flex; align-items: center; justify-content: center; color: white; height: 200px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <div class="program-info">
+            <span class="program-tag">Education</span>
+            <h3>Scholarships Program</h3>
+            <p>Direct financial support for deserving, financially weak students at all levels to complete their high school and university degrees.</p>
+            <div class="program-footer">
+              <span class="program-stat">500+ Awarded</span>
+              <a class="program-link" onclick="openProgramModal('scholarship')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 7: Combined Marriages -->
+        <div class="program-card tilt-card">
+          <div class="program-img" style="background: linear-gradient(135deg, #EC4899, #7C3AED); display: flex; align-items: center; justify-content: center; color: white; height: 200px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <div class="program-info">
+            <span class="program-tag">Social Welfare</span>
+            <h3>Combined Marriages</h3>
+            <p>Lifting the heavy financial burden off impoverished families by sponsoring dignified collective marriage ceremonies and gift packages.</p>
+            <div class="program-footer">
+              <span class="program-stat">25+ Events | 500+ Couples</span>
+              <a class="program-link" onclick="openProgramModal('marriage')" data-i18n="prog_learn_more">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 8: Khaireen & Donors -->
+        <div class="program-card tilt-card">
+          <div class="program-img" style="background: linear-gradient(135deg, var(--color-navy), var(--color-gold)); display: flex; align-items: center; justify-content: center; color: white; height: 200px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           </div>
           <div class="program-info">
             <span class="program-tag" data-i18n="prog_donor_tag">Supporters</span>
             <h3 data-i18n="prog_donor_title">Khaireen & Donors</h3>
-            <p data-i18n="prog_donor_desc">Honoring our well-wishers and donors whose generous support powers free healthcare, clean water, and IT training campaigns across Sindh.</p>
+            <p data-i18n="prog_donor_desc">Honoring our well-wishers and donors whose generous support powers free healthcare, clean water, and IT training campaigns across Pakistan.</p>
             <div class="program-footer">
               <span class="program-stat" data-i18n="prog_donor_stat">100% Direct Impact</span>
               <a class="program-link" onclick="openProgramModal('donor')" data-i18n="prog_learn_more">Learn More &rarr;</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- On-Ground Realities Section (Field Work) -->
+  <section class="field-work" id="field-work">
+    <div class="container">
+      <div class="section-header">
+        <span>Real Field Impact</span>
+        <h2>On-Ground Realities</h2>
+        <p>A glimpse into our daily efforts to serve humanity across Sindh, Punjab, and Balochistan.</p>
+      </div>
+
+      <div class="field-rows-container">
+        <!-- Row 1: Image Left -->
+        <div class="field-row">
+          <div class="field-image" onclick="openProgramModal('flood')">
+            <img src="hero_welfare_bg.png" alt="Emergency Flood & Disaster Relief">
+            <div class="img-overlay-hint"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M14 10l6-6M9 21H3v-6M10 14l-6 6"/></svg> View Details</div>
+          </div>
+          <div class="field-text">
+            <span>Emergency Response</span>
+            <h3>Emergency Flood & Disaster Relief</h3>
+            <p>During devastating floods, our volunteer teams operate on front lines in rescue boats, delivering emergency hot meals, clean drinking water, temporary tents, and medical aid to stranded families in remote villages.</p>
+          </div>
+        </div>
+
+        <!-- Row 2: Image Right -->
+        <div class="field-row reverse">
+          <div class="field-text">
+            <span>Vision Restoration</span>
+            <h3>Surgical Eye Camps</h3>
+            <p>Our qualified surgeons perform hundreds of free cataract surgeries in mobile clinical setups, providing post-op medications and dark glasses to restore sight to elderly citizens who cannot afford treatment.</p>
+          </div>
+          <div class="field-image" onclick="openProgramModal('eye')">
+            <img src="trust_health_banner.png" alt="Surgical Eye Camps">
+            <div class="img-overlay-hint"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M14 10l6-6M9 21H3v-6M10 14l-6 6"/></svg> View Details</div>
+          </div>
+        </div>
+
+        <!-- Row 3: Image Left -->
+        <div class="field-row">
+          <div class="field-image" onclick="openProgramModal('water')">
+            <img src="water_pump_sindh.png" alt="Clean Water Projects">
+            <div class="img-overlay-hint"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M14 10l6-6M9 21H3v-6M10 14l-6 6"/></svg> View Details</div>
+          </div>
+          <div class="field-text">
+            <span>Water for Life</span>
+            <h3>Clean Water Hand Pumps</h3>
+            <p>Access to safe drinking water is a fundamental human right. Our "Water for Life" project has installed thousands of deep hand pumps in arid villages, saving children from deadly water-borne diseases.</p>
           </div>
         </div>
       </div>

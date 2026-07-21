@@ -353,22 +353,92 @@ const programDetails = {
   },
   health: {
     en: {
-      title: "Public Health Awareness & Camps",
+      title: "General Medical Camps & Healthcare",
       content: `Our healthcare division focuses on addressing high-prevalence public health concerns in rural Sindh, specifically Viral Hepatitis (B & C) and HIV/AIDS. 
       <br><br>
-      Partnering with the Association of Pakistani-Descent Gastroenterologists of North America (APGNA) under the APPNA Hepatitis Initiative, we run active screening and treatment camps in Larkana, Dadu, and Khairpur Nathan Shah. We have also held 16 mobile eye clinics, helping cure blindness by performing 28 successful cataract surgeries.`
+      Partnering with APGNA under the APPNA Hepatitis Initiative, we run active screening and free medication camps in Larkana, Dadu, and Khairpur Nathan Shah, having treated over 25,000 patients to date.`
     },
     ur: {
-      title: "عوامی صحت کی مہمات اور علاج",
+      title: "عوامی صحت کی مہمات اور مفت علاج",
       content: `ہمارا طبی شعبہ دیہی سندھ میں ہیپاٹائٹس بی/سی اور ایچ آئی وی/ایڈز جیسے خطرناک امراض کی روک تھام پر توجہ مرکوز کرتا ہے۔ 
       <br><br>
-      شمالی امریکہ کے ڈاکٹروں کی تنظیم (APGNA) اور APPNA ہیپاٹائٹس انیشیٹو کے تعاون سے ہم لاڑکانہ، دادو اور خیرپور ناتھن شاہ میں تشخیصی اور علاج کے کیمپ لگاتے ہیں۔ اس کے علاوہ 16 موبائل آئی کیمپوں کے ذریعے آنکھوں کے ٹیسٹ اور 28 کامیاب موتیے کے آپریشنز کیے گئے ہیں۔`
+      APGNA اور APPNA کے تعاون سے ہم لاڑکانہ، دادو اور خیرپور ناتھن شاہ میں مفت تشخیصی اور علاج کے کیمپ لگاتے ہیں جن میں 25,000 سے زائد مریضوں کا مفت علاج کیا گیا ہے۔`
     },
     sd: {
-      title: "عوامي صحت جون مهمون ۽ علاج",
+      title: "عوامي صحت جون مهمون ۽ مفت علاج",
       content: `اسان جو طبي شعبو ٻهراڙي واري سنڌ ۾ هيپاٽائيٽس بي/سي ۽ ايڇ آءِ وي/ايڊز جهڙن خطرناڪ مرضن جي روڪٿام تي ڌيان ڏئي ٿو. 
       <br><br>
-      اتر آمريڪا جي ڊاڪٽرن جي تنظيم (APGNA) ۽ APPNA هيپاٽائيٽس انيشيٽو جي سهڪار سان اسان لاڙڪاڻي، دادو ۽ خيرپور ناٿن شاهه ۾ تشخيصي ۽ علاج جا ڪيمپ لڳائيندا آهيون. ان کان علاوه 16 موبائل آئي ڪيمپن ذريعي اکين جا ٽيسٽ ۽ 28 ڪامياب موتئي جا آپريشن ڪيا ويا آهن.`
+      APGNA ۽ APPNA جي سهڪار سان اسان لاڙڪاڻي، دادو ۽ خيرپور ناٿن شاهه ۾ فري ڪيمپ لڳائيندا آهيون جنهن مان 25,000 کان وڌيڪ مريض فائدو حاصل ڪري چڪا آهن.`
+    }
+  },
+  eye: {
+    en: {
+      title: "Free Surgical Eye Camps",
+      content: `Our mobile eye clinical teams visit distant rural areas, screening patients for refractive errors and cataract blindness. Over 30 clinical eye camps have been organized, completing more than 2,800 free cataract surgeries with intraocular lens implants.`
+    },
+    ur: {
+      title: "مفت سارجیکل آئی کیمپس",
+      content: `ہمارے موبائل آئی کلینک دیہی علاقوں کا دورہ کرتے ہیں جہاں بینائی کی محرومی کا شکار بزرگوں کے مفت معائنے اور 2,800 سے زائد موتیے کے کامیاب آپریشنز کیے جا چکے ہیں۔`
+    },
+    sd: {
+      title: "فري سرجيڪل آئي ڪيمپس",
+      content: `اسان جون موبائل آئي ٽيمون پري جي ڳوٺن ۾ وڃي اکين جا مفت معائنا ۽ 2,800 کان وڌيڪ موتئي جا ڪامياب آپريشن ڪري چڪيون آهن.`
+    }
+  },
+  vocational: {
+    en: {
+      title: "Vocational & Skill Training Centers",
+      content: `BRWT establishes local vocational centers equipped with sewing machines, tailoring tools, and craft materials, empowering disadvantaged women and young men to earn independent livelihoods.`
+    },
+    ur: {
+      title: "ووکیشنل و ٹیکنیکل مراکز",
+      content: `بی آر ڈبلیو ٹی پسماندہ خواتین اور نوجوانوں کو سلائی، کڑھائی اور فنی مہارتوں کی مفت تربیت فراہم کرتا ہے تاکہ وہ اپنے پاؤں پر کھڑے ہو سکیں۔`
+    },
+    sd: {
+      title: "ووڪيشنل ۽ ٽيڪنيڪل مرڪز",
+      content: `بي آر ڊبليو ٽي عورتن ۽ نوجوانن کي سار سنڀال، سلائي ۽ بنيادي ٽيڪنيڪل تربيت ڏئي ٿو ته جيئن هو پنهنجو روزگار سائين سان ڪمائي سگهن.`
+    }
+  },
+  scholarship: {
+    en: {
+      title: "Student Educational Scholarships",
+      content: `Financial constraints should never stand in the way of education. BRWT awards direct educational scholarships covering school fees, textbooks, and university tuition for over 500 needy students.`
+    },
+    ur: {
+      title: "مستحق طلباء کے لیے تعلیمی اسکالرشپس",
+      content: `بی آر ڈبلیو ٹی 500 سے زائد نادار اور ہونہار طلباء کو تعلیمی اخراجات، فیسوں اور کتابوں کے لیے براہ راست مالی معاونت فراہم کرتا ہے۔`
+    },
+    sd: {
+      title: "طلباء لاءِ تعليمي اسڪالرشپس",
+      content: `بي آر ڊبليو ٽي 500 کان وڌيڪ مستحق شاگردن کي سندن فيسن ۽ ڪتابن لاءِ تعليمي اسڪالرشپ ڏئي ٿو.`
+    }
+  },
+  marriage: {
+    en: {
+      title: "Collective Marriage Ceremonies",
+      content: `To relieve poor parents of overwhelming financial debts, BRWT organizes collective marriage events providing basic household dowry packages and dignified wedding ceremonies for orphan and needy couples.`
+    },
+    ur: {
+      title: "اجتماعی شادیوں کی تقاریب",
+      content: `غریب اور نادار والدین کا بوجھ ہلکا کرنے کے لیے بی آر ڈبلیو ٹی 500 سے زائد جوڑوں کی اجتماعی شادیوں کا اہتمام اور بنیادی ضروریات زندگی کے گفٹ پیکجز فراہم کر چکا ہے۔`
+    },
+    sd: {
+      title: "اجتماعي شادين جون تقريبون",
+      content: `بي آر ڊبليو ٽي 500 کان وڌيڪ غريب جوڙن جي اجتماعي شادين ۽ ضروري گهريلو سامان جا گفٽ پيڪيجز فراهم ڪري چڪو آهي.`
+    }
+  },
+  flood: {
+    en: {
+      title: "Emergency Relief Operations",
+      content: `During severe flood catastrophes, BRWT rescue teams deploy boats, tents, food ration bags, and mobile health units directly to submerged villages across Sindh.`
+    },
+    ur: {
+      title: "ہنگامی سیلاب و قدرتی آفات امداد",
+      content: `سیلاب کی تباہ کاریوں کے دوران بی آر ڈبلیو ٹی کی امدادی ٹیمیں کشتیوں، راشن بیگز، خیموں اور طبی ٹیموں کے ساتھ متاثرہ علاقوں میں امدادی سرگرمیاں انجام دیتی ہیں۔`
+    },
+    sd: {
+      title: "هنگامي ٻوڏ امدادي مهمون",
+      content: `ٻوڏ جي تباھي دوران بي آر ڊبليو ٽي جون امدادي ٽيمون ڳوٺن ۾ راشن، خيما ۽ طبي امداد پهچائينديون آهن.`
     }
   },
   water: {

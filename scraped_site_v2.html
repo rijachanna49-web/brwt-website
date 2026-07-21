@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilqees Razia Laghari Welfare Trust</title>
+    <!-- Google Fonts for Luxury Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <!-- Particle.js Container for Glitter Effect -->
+    <div id="particles-js"></div>
+
+    <header class="luxury-header" data-aos="fade-down" data-aos-duration="1000">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="BRT Logo" class="brand-logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#about">Our Story</a>
+                <a href="#impact">Impact</a>
+                <a href="#programs">Programs</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <!-- Hidden Google Translate Element (Fully rendered but off-screen) -->
+                <div id="google_translate_element" style="position:absolute; top:-9999px; left:-9999px; z-index:-999;"></div>
+                
+                <!-- Custom Language Button -->
+                <button id="customLangBtn" class="btn-donate" style="display:flex; align-items:center; gap:8px;">
+                    <i class="fa-solid fa-globe"></i> Language
+                </button>
+                
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="btn-donate" onclick="openDonateModal()">Support Us</button>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <button class="close-menu-btn">&times;</button>
+            <nav class="mobile-nav-links">
+                <a href="#about">Our Story</a>
+                <a href="#impact">Impact</a>
+                <a href="#programs">Programs</a>
+                <a href="#contact">Contact</a>
+                <button class="mobile-btn-donate" onclick="openDonateModal()">Support Us</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Dynamic Hero Slider Section -->
+        <section class="hero-section">
+            <!-- Slider Images -->
+            <div class="hero-slider">
+                <div class="slide active" style="background-image: url('eyes.jpg');"></div>
+                <div class="slide" style="background-image: url('flood.jpg');"></div>
+                <div class="slide" style="background-image: url('handpump.jpg');"></div>
+                <div class="slide" style="background-image: url('operation.jpg');"></div>
+                <div class="slide" style="background-image: url('knkj.jpg');"></div>
+            </div>
+            
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content" data-aos="zoom-in" data-aos-duration="1500">
+                <span class="hero-subtitle">SERVING HUMANITY SINCE 2019</span>
+                <h1 class="hero-title">
+                    <span class="line">RESTORE DIGNITY,</span>
+                    <span class="line italic-serif">TRANSFORM LIVES</span>
+                </h1>
+                <p class="hero-desc">The Bilqees Razia Laghari Welfare Trust delivers elite-level healthcare, education, and immediate disaster relief to the most remote corners of Pakistan. 100% Free of Cost.</p>
+                <div class="scroll-indicator">
+                    <span>EXPLORE</span>
+                    <div class="line-down"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Story / About Section -->
+        <section id="about" class="story-section">
+            <div class="container story-container">
+                <div class="story-text" data-aos="fade-right" data-aos-duration="1200">
+                    <span class="section-subtitle">Our Foundation</span>
+                    <h2 class="section-heading">Born from Compassion</h2>
+                    <p>The Bilqees Razia Laghari Welfare Trust (BRT) was founded in 2019 by philanthropist <strong>Haji Zaffar Ali Khan Laghari</strong>. Driven by a deep empathy for the underprivileged, he established this organization using his personal resources to uplift communities that were historically denied basic human rights.</p>
+                    <p>The Trust was named in loving memory of <strong>Bilqees Razia</strong>—a symbol of selfless service. We operate on a strict Zero Admin Overhead policy, ensuring every single donation directly impacts field operations across Sindh, Punjab, Balochistan, and KPK.</p>
+                </div>
+                <div class="story-image" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="image-frame">
+                        <img src="knkj.jpg" alt="Community Support">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats / Impact Section -->
+        <section id="impact" class="stats-section">
+            <div class="container">
+                <h2 class="section-heading text-center" data-aos="fade-up">A Legacy of Impact</h2>
+                <div class="stats-grid">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="stat-number">100,000+</h3>
+                        <p class="stat-label">Lives Impacted</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="stat-number">2,800+</h3>
+                        <p class="stat-label">Cataract Surgeries</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="stat-number">7,000+</h3>
+                        <p class="stat-label">Students Educated</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="stat-number">100%</h3>
+                        <p class="stat-label">Free Services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Programs Section -->
+        <section id="programs" class="programs-section">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-subtitle">What We Do</span>
+                    <h2 class="section-heading">Our Key Initiatives</h2>
+                    <p class="section-subheading">Comprehensive programs designed to tackle multidimensional poverty and health crises.</p>
+                </div>
+                
+                <div class="programs-grid">
+                    <!-- Health -->
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-stethoscope prog-icon"></i>
+                        <h3>General Medical Camps</h3>
+                        <p>Providing free diagnostics, consultations, and medicine to remote areas.</p>
+                        <span class="prog-stat">50+ Camps | 25,000+ Treated</span>
+                    </div>
+                    
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-eye prog-icon"></i>
+                        <h3>Free Eye Camps</h3>
+                        <p>Restoring vision through complete checkups and free cataract surgeries.</p>
+                        <span class="prog-stat">30+ Camps | 2,800+ Surgeries</span>
+                    </div>
+                    
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-virus prog-icon"></i>
+                        <h3>Hepatitis Camps</h3>
+                        <p>Aggressive screening, counseling, and treatment to combat Hepatitis spread.</p>
+                        <span class="prog-stat">20+ Camps | 6,000+ Screened</span>
+                    </div>
+                    
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fa-solid fa-ribbon prog-icon"></i>
+                        <h3>HIV/AIDS Awareness</h3>
+                        <p>Educating the public on prevention, transmission, and stigma reduction.</p>
+                        <span class="prog-stat">15+ Programs | 10,000+ Educated</span>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-desktop prog-icon"></i>
+                        <h3>Computer Education</h3>
+                        <p>Equipping youth with essential digital skills for the modern workforce.</p>
+                        <span class="prog-stat">10+ Centers | 7,000+ Students</span>
+                    </div>
+                    
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-tools prog-icon"></i>
+                        <h3>Vocational Centers</h3>
+                        <p>Empowering women and young men with practical, market-ready skills.</p>
+                        <span class="prog-stat">12+ Centers | 2,000+ Trained</span>
+                    </div>
+                    
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fa-solid fa-user-graduate prog-icon"></i>
+                        <h3>Scholarships Program</h3>
+                        <p>Financial support for talented but financially weak students at all levels.</p>
+                        <span class="prog-stat">500+ Scholarships Awarded</span>
+                    </div>
+
+                    <!-- Welfare -->
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fa-solid fa-hand-holding-droplet prog-icon"></i>
+                        <h3>Clean Water Projects</h3>
+                        <p>Installing hand pumps and filtration plants in water-scarce regions.</p>
+                        <span class="prog-stat">200+ Pumps | 50,000+ Beneficiaries</span>
+                    </div>
+                    
+                    <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-ring prog-icon"></i>
+                        <h3>Combine Marriages</h3>
+                        <p>Lifting the financial burden off poor families by funding dignified marriages.</p>
+                        <span class="prog-stat">25+ Events | 500+ Couples Married</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Field Work / On-Ground Realities (Alternating Layout) -->
+        <section id="field-work" class="field-section">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <span class="section-subtitle">Real Impact</span>
+                    <h2 class="section-heading">On-Ground Realities</h2>
+                    <p class="section-subheading">A glimpse into our daily efforts to serve humanity.</p>
+                </div>
+
+                <!-- Row 1: Image Left -->
+                <div class="field-row">
+                    <div class="field-image clickable-img" onclick="openProjectModal('flood')" data-aos="fade-right">
+                        <img src="pl.jpg" alt="Flood Relief">
+                        <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> View Details</div>
+                    </div>
+                    <div class="field-text" data-aos="fade-left">
+                        <h3>Emergency Flood & Disaster Relief</h3>
+                        <p>During the devastating floods, our teams are on the front lines in boats and life jackets, rescuing stranded families and providing emergency food, shelter, and medical aid when it's needed the most.</p>
+                    </div>
+                </div>
+
+                <!-- Row 2: Image Right -->
+                <div class="field-row reverse">
+                    <div class="field-text" data-aos="fade-right">
+                        <h3>Surgical Eye Camps</h3>
+                        <p>Our highly qualified surgeons perform hundreds of free cataract surgeries in remote areas, restoring sight and bringing light back into the lives of the elderly who cannot afford treatment.</p>
+                    </div>
+                    <div class="field-image clickable-img" onclick="openProjectModal('eye')" data-aos="fade-left">
+                        <img src="pk.jpg" alt="Eye Surgery">
+                        <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> View Details</div>
+                    </div>
+                </div>
+
+                <!-- Row 3: Image Left -->
+                <div class="field-row">
+                    <div class="field-image clickable-img" onclick="openProjectModal('ration')" data-aos="fade-right">
+                        <img src="rashan.jpg" alt="Ration Distribution">
+                        <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> View Details</div>
+                    </div>
+                    <div class="field-text" data-aos="fade-left">
+                        <h3>Ration & Food Distribution</h3>
+                        <p>No family should sleep hungry. We regularly distribute heavy ration bags containing flour, rice, oil, and essentials to thousands of impoverished families and widows across villages.</p>
+                    </div>
+                </div>
+
+                <!-- Row 4: Image Right -->
+                <div class="field-row reverse">
+                    <div class="field-text" data-aos="fade-right">
+                        <h3>Community Support & Engagement</h3>
+                        <p>We sit with the community to understand their deeply rooted issues. From listening to their health concerns to setting up immediate assistance, our connection with the locals is genuine and respectful.</p>
+                    </div>
+                    <div class="field-image clickable-img" onclick="openProjectModal('community')" data-aos="fade-left">
+                        <img src="po.jpg" alt="Community Support">
+                        <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> View Details</div>
+                    </div>
+                </div>
+
+                <!-- Row 5: Image Left -->
+                <div class="field-row">
+                    <div class="field-image clickable-img" onclick="openProjectModal('navy')" data-aos="fade-right">
+                        <img src="sir.jpg" alt="Collaborative Medical Camp">
+                        <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> View Details</div>
+                    </div>
+                    <div class="field-text" data-aos="fade-left">
+                        <h3>Collaborative Medical Camps</h3>
+                        <p>Partnering with organizations like the Pakistan Navy, we set up massive medical relief camps at coastlines and deep rural areas, providing top-tier medical checkups and medicines absolutely free.</p>
+                    </div>
+                </div>
+
+                <!-- Row 6: Hand Pumps & Filtration (New) -->
+                <div class="field-row reverse">
+                    <div class="field-text" data-aos="fade-right">
+                        <h3>Clean Water Hand Pumps</h3>
+                        <p>Access to safe drinking water is a fundamental right. Deep research shows our extensive "Water for Life" project has successfully installed hundreds of hand pumps in extremely arid, remote villages of Pakistan. These pumps save children from deadly water-borne diseases like cholera and typhoid, bringing joy, health, and a sustainable water source directly to their homes.</p>
+                    </div>
+                    <div class="field-image clickable-img" onclick="openProjectModal('water')" data-aos="fade-left">
+                        <img src="handpump.jpg" alt="Hand Pumps Project">
+                        <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> View Details</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact & Form Section -->
+        <section id="contact" class="contact-section">
+            <div class="container contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-subtitle">Get Involved</span>
+                    <h2 class="section-heading">Make an Impact Today</h2>
+                    <p>Whether you want to volunteer, donate, or partner with us, your support helps us restore dignity to thousands.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fa-solid fa-envelope"></i> info@bilqeesraziatrust.org</p>
+                        <p><i class="fa-solid fa-phone"></i> +92-346-0205203</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <!-- Web3Forms Integration -->
+                    <form action="https://api.web3forms.com/submit" method="POST" class="luxury-form">
+                        <!-- Replace this with your actual Access Key from Web3Forms -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <div class="input-group">
+                            <input type="text" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" required placeholder="Your Email">
+                        </div>
+                        <div class="input-group">
+                            <select name="subject" required>
+                                <option value="" disabled selected>How can you help?</option>
+                                <option value="volunteer">Become a Volunteer</option>
+                                <option value="donate">Make a Donation</option>
+                                <option value="partner">Corporate Partnership</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" rows="4" required placeholder="Your Message"></textarea>
+                        </div>
+                        <!-- Custom Success Page Redirect -->
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <button type="submit" class="btn-submit">Send to Chief</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-container">
+                    <img src="logo.png" alt="BRT Logo" class="brand-logo">
+                </div>
+                <p>Bilqees Razia Laghari Welfare Trust</p>
+                <p class="tagline">Restoring Hope, Changing Destinies.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="javascript:void(0)" onclick="alert('Our official Facebook page will be linked here soon!')"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="javascript:void(0)" onclick="alert('Our official Twitter page will be linked here soon!')"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="javascript:void(0)" onclick="alert('Our official Instagram page will be linked here soon!')"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <p>&copy; 2026 Bilqees Razia Laghari Welfare Trust (BRT). All Rights Reserved.</p>
+            <div class="signature-m">
+                <img src="signature.png" alt="Signature M" class="signature-pic">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donate Modal -->
+    <div class="modal-overlay" id="donateModal">
+        <div class="modal-card">
+            <button class="close-modal-btn" onclick="closeDonateModal()">&times;</button>
+            <div class="modal-header">
+                <h2>Make a Difference</h2>
+                <p>Your support brings hope to the forgotten.</p>
+            </div>
+            <div class="modal-body">
+                <form class="luxury-form donate-form">
+                    <div class="input-group">
+                        <select required>
+                            <option value="" disabled selected>Select a Cause</option>
+                            <option value="eye">Free Eye Camp Surgery ($50)</option>
+                            <option value="water">Water Hand Pump ($200)</option>
+                            <option value="education">Orphan Education ($150)</option>
+                            <option value="general">General Welfare Fund</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" placeholder="Donation Amount (USD)" required min="5">
+                    </div>
+                    <div class="payment-options">
+                        <div class="pay-btn"><i class="fa-brands fa-cc-visa"></i> Card</div>
+                        <div class="pay-btn"><i class="fa-brands fa-paypal"></i> PayPal</div>
+                    </div>
+                    <button type="submit" class="btn-submit" style="margin-top:20px;">Proceed to Secure Payment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal (Dynamic Content) -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-card project-card">
+            <button class="close-modal-btn" onclick="closeProjectModal()">&times;</button>
+            <div class="project-modal-layout">
+                <div class="project-modal-image">
+                    <img id="projectModalImg" src="" alt="Project">
+                </div>
+                <div class="project-modal-content">
+                    <span id="projectModalTag" class="section-subtitle">Deep Research</span>
+                    <h2 id="projectModalTitle">Project Title</h2>
+                    <div id="projectModalText" class="project-modal-text">
+                        Loading detailed research...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Language Modal with Search -->
+    <div class="modal-overlay" id="langModal">
+        <div class="modal-card" style="max-width: 400px; text-align:center;">
+            <button class="close-modal-btn" onclick="document.getElementById('langModal').classList.remove('active')" style="top:10px; right:10px; width:40px; height:40px; font-size:25px;">&times;</button>
+            <h3 style="margin-bottom: 20px; color: var(--accent-gold);">Select Language</h3>
+            
+            <!-- Real Search Bar -->
+            <div class="input-group" style="margin-bottom: 20px;">
+                <input type="text" id="langSearch" placeholder="Search language (e.g., Urdu, Sindhi)..." style="width: 100%; border-radius: 30px; text-align:center;">
+            </div>
+            
+            <div class="lang-list" id="langList">
+                <!-- Most Popular & Regional Languages -->
+                <button class="lang-option" data-lang="en">English</button>
+                <button class="lang-option" data-lang="ur">Urdu (اردو)</button>
+                <button class="lang-option" data-lang="sd">Sindhi (سنڌي)</button>
+                <button class="lang-option" data-lang="pa">Punjabi (پنجابی)</button>
+                <button class="lang-option" data-lang="ps">Pashto (پښتو)</button>
+                <button class="lang-option" data-lang="ar">Arabic (العربية)</button>
+                <button class="lang-option" data-lang="fa">Persian (فارسی)</button>
+                <button class="lang-option" data-lang="hi">Hindi (हिन्दी)</button>
+                <button class="lang-option" data-lang="bn">Bengali (বাংলা)</button>
+                <button class="lang-option" data-lang="gu">Gujarati (ગુજરાતી)</button>
+                
+                <!-- International Languages -->
+                <button class="lang-option" data-lang="fr">French (Français)</button>
+                <button class="lang-option" data-lang="es">Spanish (Español)</button>
+                <button class="lang-option" data-lang="de">German (Deutsch)</button>
+                <button class="lang-option" data-lang="zh-CN">Chinese (中文)</button>
+                <button class="lang-option" data-lang="ru">Russian (Русский)</button>
+                <button class="lang-option" data-lang="tr">Turkish (Türkçe)</button>
+                <button class="lang-option" data-lang="id">Indonesian (Bahasa Indonesia)</button>
+                <button class="lang-option" data-lang="ms">Malay (Bahasa Melayu)</button>
+                <button class="lang-option" data-lang="it">Italian (Italiano)</button>
+                <button class="lang-option" data-lang="pt">Portuguese (Português)</button>
+                <button class="lang-option" data-lang="ja">Japanese (日本語)</button>
+                <button class="lang-option" data-lang="ko">Korean (한국어)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
