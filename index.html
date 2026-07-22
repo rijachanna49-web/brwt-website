@@ -101,84 +101,89 @@
     </div>
   </header>
 
-  <!-- Hero Section (Full-Width WishFund Style with Animated Particle Stars) -->
+  <!-- Hero Section (Full-Width Slideshow Slider Layout) -->
   <section class="hero" id="home">
+    <!-- Automated Background Slider -->
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('hero_welfare_bg.png');"></div>
+      <div class="slide" style="background-image: url('trust_education_banner.png');"></div>
+      <div class="slide" style="background-image: url('water_pump_sindh.png');"></div>
+      <div class="slide" style="background-image: url('trust_health_banner.png');"></div>
+      <div class="slide" style="background-image: url('computer_education_sindh.png');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    
     <canvas id="starfieldCanvas"></canvas>
-    <div class="hero-glow-bg"></div>
     <div class="floating-3d floating-sphere-1"></div>
     <div class="floating-3d floating-sphere-2"></div>
     <div class="floating-3d floating-torus-1"></div>
     
     <div class="hero-container animate-fade-in">
-      <div class="hero-grid-split">
-        <!-- Left Side: Text and CTA Info -->
-        <div class="hero-content-wrapper">
-          <span class="hero-subtitle" data-i18n="hero_badge">Small Help Can Make Change</span>
-          <h1 class="hero-title" data-i18n="hero_heading">New Hope for the <span>Future</span></h1>
-          <p class="hero-desc" data-i18n="hero_desc">A dedicated non-profit organization striving to elevate underserved communities in Sindh, Pakistan, by providing free computer education, public health awareness, clean drinking water, and immediate disaster relief.</p>
-          
-          <div class="hero-btns">
-            <button class="btn btn-aimm-purple" onclick="openDonateModal()" data-i18n="hero_btn_donate">Donate Today</button>
-            <button class="btn btn-aimm-outline" onclick="openProgramModal('edu')">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              Our Story
-            </button>
-          </div>
-
-          <!-- Aimm-style Bottom Columns -->
-          <div class="hero-features">
-            <div class="hero-feature-item">
-              <div class="hero-feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              </div>
-              <div class="hero-feature-text">
-                <h4 data-i18n="prog_edu_title">Web & IT Education</h4>
-                <p>Free full-stack coding labs in rural Sindh.</p>
-              </div>
-            </div>
-
-            <div class="hero-feature-item">
-              <div class="hero-feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-              </div>
-              <div class="hero-feature-text">
-                <h4>Welfare & Relief</h4>
-                <p>Eye camps, hand pumps, and disaster response.</p>
-              </div>
-            </div>
-          </div>
+      <div class="hero-content">
+        <span class="hero-subtitle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          SERVING HUMANITY SINCE 2019
+        </span>
+        <h1 class="hero-title">
+          RESTORE DIGNITY,<br>
+          <span class="italic-serif">TRANSFORM LIVES</span>
+        </h1>
+        <p class="hero-desc">The Bilqees Razia Laghari Welfare Trust delivers elite-level healthcare, education, and immediate disaster relief to the most remote corners of Pakistan. 100% Free of Cost.</p>
+        <div class="hero-btns">
+          <button class="btn btn-hero-gradient" onclick="openDonateModal()">Donate Now</button>
+          <button class="btn btn-hero-outline" onclick="document.getElementById('story').scrollIntoView({behavior: 'smooth'})">Read Our Story &rarr;</button>
         </div>
+      </div>
+    </div>
 
-        <!-- Right Side: 3D Illustration Render -->
-        <div class="hero-illustration-wrapper">
-          <img src="hero_3d_aimm_illustration.png" alt="BRWT 3D Mascot Render" class="hero-3d-image">
+    <!-- Explore Scroll Indicator -->
+    <a href="#story" class="scroll-indicator">
+      <span>EXPLORE</span>
+      <div class="line-down"></div>
+    </a>
+
+    <!-- Glassmorphic Stats Overlay (Aimm/Vercel Hybrid) -->
+    <div class="hero-stats-overlay">
+      <div class="hero-stat-block">
+        <div class="hero-stat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <p class="hero-stat-val">13</p>
+          <p class="hero-stat-label">Active Programs</p>
+        </div>
+      </div>
+      <div class="hero-stat-block">
+        <div class="hero-stat-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <p class="hero-stat-val">40+</p>
+          <p class="hero-stat-label">Villages Reached</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Our Story / Legacy Section -->
+  <!-- The Story / About Section -->
   <section class="history" id="story">
     <div class="container">
-      <div class="section-header">
-        <h2 data-i18n="story_title">Our Founding Legacy</h2>
-        <p data-i18n="story_subtitle">Honoring the values of selflessness, empathy, and service to humanity.</p>
-      </div>
-      
       <div class="history-grid">
-        <div class="history-img-wrapper">
-          <!-- Main visual fallback or placeholder -->
-          <img src="logo.png" alt="BRWT Logo" class="history-image" style="object-fit: contain; padding: 1rem; background: transparent;">
-          <div class="history-img-deco"></div>
-        </div>
-        
         <div class="history-content">
-          <h3 data-i18n="story_content_title">The Story of Bilqees & Razia</h3>
-          <p data-i18n="story_para1">The Bilqees Razia Laghari Welfare Trust (BRWT) was born from a deep family commitment to honor the legacy of Bilqees and Razia. As maternal pillars of the Laghari family, their lives exemplified absolute compassion and care for the needy.</p>
-          <p data-i18n="story_para2">To ensure their legacy continues to light the path for future generations, the surviving family members established this Trust. We focus on bridging critical development and humanitarian gaps in Sindh—particularly in Larkana, Dadu, and nearby districts—by raising local capacities, providing modern web education, and ensuring basic public healthcare.</p>
-          
+          <span>Our Foundation</span>
+          <h2>Born from Compassion</h2>
+          <p>The Bilqees Razia Laghari Welfare Trust (BRT) was founded in 2019 by philanthropist <strong>Haji Zaffar Ali Khan Laghari</strong>. Driven by a deep empathy for the underprivileged, he established this organization using his personal resources to uplift communities that were historically denied basic human rights.</p>
+          <p>The Trust was named in loving memory of <strong>Bilqees Razia</strong>—a symbol of selfless service. We operate on a strict Zero Admin Overhead policy, ensuring every single donation directly impacts field operations across Sindh, Punjab, Balochistan, and KPK.</p>
           <div class="history-quote">
-            <p data-i18n="story_quote">"The purpose of life is not just to exist, but to serve others with compassion and build a healthier, empowered nation."</p>
+            <p>"She never turned away a family in need, never asked what they could offer in return. That is the only standard I have ever tried to hold this Trust to."</p>
+          </div>
+        </div>
+
+        <div class="history-img-wrapper">
+          <img src="founder_ahmad_sultan.png" alt="Dr. Ahmad Sultan Laghari" class="history-image">
+          <div style="position: absolute; bottom: 1.5rem; left: 1.5rem; color: white; z-index: 3; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+            <p style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.1rem; color: white;">Dr. Ahmad Sultan Laghari</p>
+            <p style="font-size: 0.8rem; opacity: 0.85; color: white;">Coordinator, Bilqees Razia Welfare Trust</p>
           </div>
         </div>
       </div>

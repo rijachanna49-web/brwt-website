@@ -492,6 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
   init3DTilt();
   initStarfield();
   initScrollHeader();
+  initHeroSlider();
 });
 
 // ==========================================
@@ -888,4 +889,23 @@ function initScrollHeader() {
       header.classList.remove('scrolled');
     }
   });
+}
+
+// ==========================================
+// AUTOMATED HERO BACKGROUND SLIDER
+// ==========================================
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slider .slide');
+  if (slides.length === 0) return;
+  
+  let currentSlide = 0;
+  const slideInterval = 5000; // rotate every 5 seconds
+  
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+  
+  setInterval(nextSlide, slideInterval);
 }
